@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#a04100", "primary": "#9c3f00", "tertiary": "#38654d", "inverse-surface": "#303036", "on-secondary-fixed": "#1c1b1b", "on-primary-container": "#fffbff", "on-tertiary-fixed": "#002112", "on-background": "#1b1b21", "on-primary-fixed-variant": "#7a3000", "secondary-container": "#e5e2e1", "tertiary-fixed-dim": "#a1d1b4", "on-surface": "#1b1b21", "error-container": "#ffdad6", "tertiary-fixed": "#bceecf", "on-secondary-fixed-variant": "#474646", "tertiary-container": "#507e65", "primary-fixed-dim": "#ffb693", "error": "#ba1a1a", "on-surface-variant": "#574239", "surface": "#fbf8ff", "surface-container-low": "#f5f2fb", "inverse-primary": "#ffb693", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#224f39", "on-error-container": "#93000a", "secondary-fixed": "#e5e2e1", "on-secondary-container": "#656464", "secondary": "#5f5e5e", "background": "#fbf8ff", "on-error": "#ffffff", "on-primary-fixed": "#341000", "on-secondary": "#ffffff", "surface-variant": "#e4e1ea", "surface-container": "#efecf5", "on-tertiary-container": "#f6fff6", "surface-container-high": "#eae7ef", "outline-variant": "#dec0b4", "surface-bright": "#fbf8ff", "surface-container-lowest": "#ffffff", "surface-dim": "#dbd9e1", "secondary-fixed-dim": "#c8c6c5", "inverse-on-surface": "#f2eff8", "on-primary": "#ffffff", "surface-container-highest": "#e4e1ea", "primary-fixed": "#ffdbcb", "primary-container": "#c05410", "outline": "#8b7267" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "gutter": "1rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "title-editorial": ["Bodoni Moda"], "headline-lg": ["Bodoni Moda"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "display-hero": ["Bodoni Moda"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Bodoni Moda"], "display-hero-mobile": ["Bodoni Moda"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "title-editorial": ["16px", { "lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-hero": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface antialiased min-h-full flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="bg-on-surface text-surface-container-lowest px-margin-mobile py-space-xs flex items-center justify-between font-label-sm text-label-sm tracking-widest uppercase"><span class="truncate font-label-sm text-label-sm">Free Worldwide Express Shipping over $150 | LUMEN10</span><button aria-label="Currency and Region selector" class="flex items-center gap-space-xs pl-space-sm shrink-0 hover:text-primary-fixed transition-colors" type="button"><span class="font-label-sm text-label-sm">USD $</span><span class="material-symbols-outlined text-[14px]">expand_more</span></button></div><div class="h-20 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="LUMEN Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface truncate">LUMEN</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Shop</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Wishlist" class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-none">2</span></button><button aria-label="Shopping Cart" class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-none">3</span></button><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pbn7AtDgkfq3byt9VdCD9s0doNwbzM5XNCN9gXYUhG_3eIsL8Lt_dy3Ejn0VLfPl2_TM3lQBsCh2R815PPGU7YgteSmramRL6Bkrf7V9CTQOEujdLKqZ9-MDBayu4iuedMbZcpYjphgrtP7icqAAnmKsvUxThNVNlJB1Mn090DZ7FG6jW3m5s8o1WSKrfV3n6GrernEQZN2p1bBtPZRyFdfiizIjlsDcugsmXHOV_rmO5vhlAb0J"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Editorial Collection Header -->
+<section class="px-margin-mobile pt-space-md pb-space-sm bg-surface">
+<div class="flex items-center gap-space-xs text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Curation 04</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Autumn / Winter Edition</span>
+</div>
+<div class="flex items-baseline justify-between gap-space-sm">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Curated Essentials</h1>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium shrink-0">128 Items</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-1">
+      Architectural silhouettes, raw silks, and tactile interior artifacts for deliberate living.
+    </p>
+</section>
+<!-- Sticky Filter & View Control Sub-Nav -->
+<div class="sticky top-20 z-30 bg-surface/95 backdrop-blur-md shadow-sm">
+<!-- Horizontal Filter Chips Carousel -->
+<div class="px-margin-mobile py-2.5 flex items-center gap-2 overflow-x-auto no-scrollbar">
+<!-- Main Filter Trigger Pill with Count -->
+<button class="shrink-0 flex items-center gap-1.5 h-9 px-3.5 rounded-full bg-on-surface text-surface font-label-sm text-label-sm uppercase tracking-wider transition-transform active:scale-95 shadow-sm" id="open-filter-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Filter (3)</span>
+</button>
+<!-- Pill 1 (Active) -->
+<button class="filter-pill active shrink-0 flex items-center gap-1 h-9 px-3.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold transition-all shadow-sm" type="button">
+<span>In Stock</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<!-- Pill 2 (Active) -->
+<button class="filter-pill active shrink-0 flex items-center gap-1 h-9 px-3.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold transition-all shadow-sm" type="button">
+<span>Terracotta &amp; Neutral</span>
+<span class="material-symbols-outlined text-[14px]">check</span>
+</button>
+<!-- Pill 3 -->
+<button class="filter-pill shrink-0 flex items-center gap-1 h-9 px-3.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-all" type="button">
+<span>Under $150</span>
+</button>
+<!-- Pill 4 -->
+<button class="filter-pill shrink-0 flex items-center gap-1 h-9 px-3.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-all" type="button">
+<span>100% Cashmere</span>
+</button>
+<!-- Pill 5 -->
+<button class="filter-pill shrink-0 flex items-center gap-1 h-9 px-3.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-all" type="button">
+<span>On Sale</span>
+</button>
+</div>
+<!-- Sub-Bar: Sort Selector & Grid/List View Switcher -->
+<div class="px-margin-mobile py-2 flex items-center justify-between bg-surface-container-low/60">
+<!-- Sort Selector Dropdown Button -->
+<div class="relative">
+<button class="flex items-center gap-1.5 h-8 py-1 px-2.5 rounded-md text-on-surface hover:bg-surface-container transition-colors" id="sort-trigger-btn" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Sort:</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface" id="current-sort-label">Featured</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span>
+</button>
+<!-- Sort Modal / Menu -->
+<div class="hidden absolute top-9 left-0 w-52 bg-surface-container-lowest rounded-lg shadow-xl p-1.5 z-40 flex flex-col gap-0.5" id="sort-menu">
+<button class="sort-option w-full text-left px-3 py-2 rounded text-label-md font-label-md text-primary font-bold bg-primary-fixed/40" data-value="Featured" type="button">Featured</button>
+<button class="sort-option w-full text-left px-3 py-2 rounded text-label-md font-label-md text-on-surface hover:bg-surface-container" data-value="Relevance" type="button">Relevance</button>
+<button class="sort-option w-full text-left px-3 py-2 rounded text-label-md font-label-md text-on-surface hover:bg-surface-container" data-value="Price: Low-to-High" type="button">Price: Low-to-High</button>
+<button class="sort-option w-full text-left px-3 py-2 rounded text-label-md font-label-md text-on-surface hover:bg-surface-container" data-value="Price: High-to-Low" type="button">Price: High-to-Low</button>
+<button class="sort-option w-full text-left px-3 py-2 rounded text-label-md font-label-md text-on-surface hover:bg-surface-container" data-value="Newest" type="button">Newest</button>
+<button class="sort-option w-full text-left px-3 py-2 rounded text-label-md font-label-md text-on-surface hover:bg-surface-container" data-value="Customer Rating" type="button">Customer Rating</button>
+</div>
+</div>
+<!-- View Switcher Toggle -->
+<div class="flex items-center bg-surface-container p-0.5 rounded-lg shadow-inner">
+<button aria-label="2 Column Grid View" class="w-8 h-7 flex items-center justify-center rounded-md bg-surface-container-lowest text-primary shadow-xs transition-all" id="view-grid-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button aria-label="Large Single Card View" class="w-8 h-7 flex items-center justify-center rounded-md text-secondary hover:text-on-surface transition-all" id="view-single-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">view_agenda</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Listing Grid Container -->
+<div class="px-margin-mobile pt-space-sm pb-space-lg">
+<div class="grid grid-cols-2 gap-x-gutter-mobile gap-y-space-md transition-all" id="product-grid">
+<!-- Card 1: Studio Cashmere Wrap Coat -->
+<article class="product-card group flex flex-col bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden relative">
+<!-- Image Container with Aspect Ratio 4:5 -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Model wearing luxurious camel-tone wool cashmere wrap coat with high collar, minimal editorial lighting against soft warm concrete wall, studio fashion catalog style with clean neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkXSTGS7SrFSRiLZOUxYQ5SvarynpCxJt3lX3WDqQ3vTcj3oyEQMdie6FQ1wsHmsCgSYL2YQauXHwaK7LOb1JzWb41ULE5nPqZRhJJ5Riaw_-RFJ0GoItn474k6797sI9BmDxMeGdVsJ_n2gzip2tXoRAjtAOnciYa-HTqqJDtZNRyw15AsR3eMtr-ViJQ9yPO-BtkcewS-jXZyV3gBfapa6XwSYdAbIB982jWuBs7rqB7nUyG8X07"/>
+<!-- Badges -->
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">-19%</span>
+</div>
+<!-- Heart Wishlist Action -->
+<button aria-label="Toggle Wishlist" class="wishlist-btn active absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-primary shadow-sm hover:scale-110 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<!-- Quick Size Reveal on Image Hover / Mobile Tap -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-center gap-1.5 py-1 px-2 rounded-lg bg-surface-container-lowest/90 backdrop-blur-sm shadow-sm">
+<span class="font-label-sm text-[10px] uppercase font-bold text-on-surface-variant">Sizes:</span>
+<span class="font-label-sm text-[10px] text-on-surface">XS</span>
+<span class="font-label-sm text-[10px] text-on-surface">S</span>
+<span class="font-label-sm text-[10px] text-on-surface font-bold">M</span>
+<span class="font-label-sm text-[10px] text-secondary">L</span>
+</div>
+</div>
+<!-- Meta Content -->
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="uppercase tracking-widest text-[10px] font-semibold text-secondary">LUMEN Studio</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-[11px] font-bold">4.9</span>
+<span class="text-secondary text-[10px]">(142)</span>
+</div>
+</div>
+<h2 class="font-body-md text-body-md font-medium text-on-surface line-clamp-1 leading-snug">Cashmere Wrap Coat</h2>
+<div class="flex items-baseline gap-1.5 mt-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$420</span>
+<span class="font-body-sm text-body-sm text-secondary line-through">$520</span>
+</div>
+</div>
+<!-- Color Swatches & Action Bar -->
+<div class="pt-1 flex items-center justify-between gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-[#C19A6B] ring-1 ring-primary shadow-xs" title="Camel"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#2B2B2B] shadow-xs" title="Deep Charcoal"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#FAF5EE] shadow-xs" title="Ivory"></span>
+</div>
+<!-- Instant Add Micro CTA -->
+<button aria-label="Quick Add to Bag" class="add-to-bag-btn h-8 px-2.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Minimalist Sculptural Ceramic Vessel -->
+<article class="product-card group flex flex-col bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden relative">
+<div class="relative w-full aspect-[4/5] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Contemporary textured terracotta and sand ceramic vase with organic curved handle on stone surface, dramatic sunbeam casting gentle architectural shadows, art direction interior catalogue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs9PedBxNdjyXFgAMID-vEkzUk-48cwPuJZcBIEqGz6Gs3OrOr1PKAESEHRWqWIXGffZurafOmB8y-_ZF_Ecwpkl9xXOuX6f-SnBlSyJMHImXCRKZbzzf6ks6Iz-QEFWpLf5wn5SooUjecGYl9ZNeB1wVBnx8BCM6YKBI46N18L439ECNCB8gkY-fepRJj5CMW4XYIu7kwrtqLQZwZ33WOAhCpJqSJFB7PcZvd2SNN1r3_7ieWdAqz"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">Bestseller</span>
+</div>
+<button aria-label="Toggle Wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm hover:text-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="uppercase tracking-widest text-[10px] font-semibold text-secondary">Objects</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-[11px] font-bold">4.8</span>
+<span class="text-secondary text-[10px]">(89)</span>
+</div>
+</div>
+<h2 class="font-body-md text-body-md font-medium text-on-surface line-clamp-1 leading-snug">Sculptural Ceramic Vessel</h2>
+<div class="flex items-baseline gap-1.5 mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$95</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] text-tertiary font-medium">Limited Studio Batch</span>
+<button aria-label="Quick Add to Bag" class="add-to-bag-btn h-8 px-2.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Saddle Leather Structured Tote -->
+<article class="product-card group flex flex-col bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden relative">
+<div class="relative w-full aspect-[4/5] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Full-grain rich cognac saddle leather tote bag with pristine edge-paint craftsmanship, placed against minimalist limestone pedestal, luxury leather goods studio portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlLudHy_HWzZt8QDiDCsP6GfI34DN4RA4dWGZ-ufvQQ_p9cPLZ_E0LoBff6WKLC_jBxFiAiKkLmHrrmIc8K1ZL9VcPVZ-rTW2ZjRj7EFpkUpv_PLgyEPn0Jpq0edFnF3DG5_xBOSZ4vLmf9xjCJf7U3-aIxGru0PZTacppHe7kQdgFmsHcfbn_s0DNry7uUBWCSbIKPTD--0Pz-GZibz-DI0p1ayLsDSFehvSyjPU0nlOSNEoxo5QK"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded bg-on-surface text-surface font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">New Arrival</span>
+</div>
+<button aria-label="Toggle Wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm hover:text-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="uppercase tracking-widest text-[10px] font-semibold text-secondary">Leatherwork</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-[11px] font-bold">5.0</span>
+<span class="text-secondary text-[10px]">(64)</span>
+</div>
+</div>
+<h2 class="font-body-md text-body-md font-medium text-on-surface line-clamp-1 leading-snug">Structured Leather Tote</h2>
+<div class="flex items-baseline gap-1.5 mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$280</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-[#8A4A28] ring-1 ring-primary shadow-xs" title="Cognac"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#1A1A1A] shadow-xs" title="Onyx Black"></span>
+</div>
+<button aria-label="Quick Add to Bag" class="add-to-bag-btn h-8 px-2.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Santal & Amber Candle 300g -->
+<article class="product-card group flex flex-col bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden relative">
+<div class="relative w-full aspect-[4/5] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Heavy amber glass candle jar with typography embossed label, softly glowing warm flame, surrounded by raw sandalwood and dried botanicals on travertine tabletop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr-jZfBkt8HpOtBpEihNI_fknvQ7gw5wbDWc4pVlQKQa8CnxX1x19egkoatkTqtox6qob2EBim4AkG2XL5qdTUSFI8E_lx6d8bFdVj8kXBUIsRdFihBSDhd3JcWNyw1SxLSsyBENqJc9jXF5LEntoTxxxKDx7CguzkPva0gSfuBa3y4iHFdhkUNqRBN4PxVd_QZQX34kOq9JgGSJq21q6WV9XsBbvS3K3XlmvXf5FEI9wbLwv9brjn"/>
+<button aria-label="Toggle Wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm hover:text-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="uppercase tracking-widest text-[10px] font-semibold text-secondary">Apothecary</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-[11px] font-bold">4.7</span>
+<span class="text-secondary text-[10px]">(210)</span>
+</div>
+</div>
+<h2 class="font-body-md text-body-md font-medium text-on-surface line-clamp-1 leading-snug">Santal &amp; Amber Candle</h2>
+<div class="flex items-baseline gap-1.5 mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$62</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 300g</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">60hr Clean Burn</span>
+<button aria-label="Quick Add to Bag" class="add-to-bag-btn h-8 px-2.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 5: Raw Silk Relaxed Button-Up -->
+<article class="product-card group flex flex-col bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden relative">
+<div class="relative w-full aspect-[4/5] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Model dressed in relaxed sand-colored unbleached raw silk button-down shirt with mother-of-pearl buttons, soft drape, warm natural morning backlight, high-end editorial styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ppo2BlNX1O-5way_Htp_C60-xTglHesYt_JHk_T7uvb1mn--3G4f19iEWesxYqj09z1mB75wDA8UfLvq982d3R4gzwXlAOiwEcMqTDOMlIe1jsoQFXnJloqHWpH1E1r5c8JqAacJjtMTJXpVKoqr7EG-eaa16yG_qu2qdwt2emjXa6UuF9bEVsq73D65_nbWn78gz_xi7wU2tBrGh8qnpDLJY4QKN4_RLbUhSYafiVlKBoG9cfd_"/>
+<button aria-label="Toggle Wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm hover:text-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="uppercase tracking-widest text-[10px] font-semibold text-secondary">Apparel</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-[11px] font-bold">4.9</span>
+<span class="text-secondary text-[10px]">(53)</span>
+</div>
+</div>
+<h2 class="font-body-md text-body-md font-medium text-on-surface line-clamp-1 leading-snug">Raw Silk Button-Up</h2>
+<div class="flex items-baseline gap-1.5 mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$165</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] text-tertiary font-medium">Organic Fiber</span>
+<button aria-label="Quick Add to Bag" class="add-to-bag-btn h-8 px-2.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 6: Artisanal Brass Desk Clock -->
+<article class="product-card group flex flex-col bg-surface-container-lowest rounded-xl shadow-xs overflow-hidden relative">
+<div class="relative w-full aspect-[4/5] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" data-alt="Brushed solid golden brass geometric desk clock with minimalist hands on matte ebony face, resting on dark walnut desk surface, quiet luxury workspace aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5_Uzxfdn54NqkaAtUYw-6iLf7kY28JsXUDWTUSzHVEqSmVeLEOHllfAaTPFonKrecoNQ-SpTIHKPedsfksGBJM8M2s66jo3Sysqp0R8YoLofFzdiwGEdWMg4zL8EcYXNsHrM-GXhtZ8Uzf2qMw-d_w5yc8D9UkF7SEJPbP_co1h2QpaI20vFCaPBztgkrW_pwWoaRXlBU4YQcsiyk9EXkSyWbhQI5ovtdBxo2x5He972eFBFOmJuj"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1 items-start">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-bold shadow-sm">-18%</span>
+</div>
+<button aria-label="Toggle Wishlist" class="wishlist-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant shadow-sm hover:text-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-2.5 flex flex-col flex-1 justify-between gap-2">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="uppercase tracking-widest text-[10px] font-semibold text-secondary">Horology</span>
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-[11px] font-bold">4.8</span>
+<span class="text-secondary text-[10px]">(31)</span>
+</div>
+</div>
+<h2 class="font-body-md text-body-md font-medium text-on-surface line-clamp-1 leading-snug">Artisanal Brass Desk Clock</h2>
+<div class="flex items-baseline gap-1.5 mt-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$130</span>
+<span class="font-body-sm text-body-sm text-secondary line-through">$160</span>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Silent Sweep</span>
+<button aria-label="Quick Add to Bag" class="add-to-bag-btn h-8 px-2.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:bg-primary hover:text-on-primary active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="hidden sm:inline">Add</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Editorial Accent Curation Banner Inside Feed -->
+<div class="my-space-md p-space-md rounded-xl bg-surface-container-high relative overflow-hidden flex flex-col justify-between">
+<div class="z-10">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Complimentary Packaging</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Gifted with Intention</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-[85%]">
+          Every order arrives in 100% recycled unbleached cotton pouches with custom scent seal.
+        </p>
+</div>
+<div class="z-10 mt- space-sm flex items-center gap-2">
+<span class="inline-flex items-center text-primary font-label-md text-label-md font-semibold gap-1">
+          Explore Gift Services
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-primary/10 pointer-events-none blur-2xl"></div>
+</div>
+<!-- Progressive Pagination & Status -->
+<div class="mt-space-md flex flex-col items-center gap-space-sm text-center">
+<div class="w-full max-w-xs flex flex-col gap-1.5 items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+          Showing <span class="text-on-surface font-bold">6</span> of <span class="text-on-surface font-bold">128</span> products
+        </span>
+<!-- Progress Bar Track -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 5%;"></div>
+</div>
+</div>
+<!-- Load More Button with Tactile Feedback -->
+<button class="w-full max-w-xs h-12 rounded-lg bg-on-surface text-surface font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform" id="load-more-btn" type="button">
+<span>Load More Products</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<span class="font-label-sm text-[11px] text-secondary">
+        Prices include import tariffs and carbon-neutral freight.
+      </span>
+</div>
+</div>
+<!-- Toast Notification (Added to Bag Micro Delight) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-16 opacity-0 pointer-events-none transition-all duration-300 z-50 flex items-center gap-2.5 px-4 py-3 rounded-xl bg-on-surface text-surface shadow-2xl" id="toast">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">check_circle</span>
+<span class="font-label-md text-label-md font-medium" id="toast-text">Added to Cart</span>
+</div>
+</div>
+<script>
+  // Filter pill toggles
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      const isCurrentlyActive = pill.classList.contains('active');
+      if (isCurrentlyActive) {
+        pill.classList.remove('active', 'bg-primary-fixed', 'text-on-primary-fixed', 'font-semibold');
+        pill.classList.add('bg-surface-container', 'text-on-surface');
+        const checkIcon = pill.querySelector('.material-symbols-outlined');
+        if (checkIcon) checkIcon.remove();
+      } else {
+        pill.classList.add('active', 'bg-primary-fixed', 'text-on-primary-fixed', 'font-semibold');
+        pill.classList.remove('bg-surface-container', 'text-on-surface');
+        const icon = document.createElement('span');
+        icon.className = 'material-symbols-outlined text-[14px]';
+        icon.textContent = 'check';
+        pill.appendChild(icon);
+      }
+    });
+  });
+
+  // Sort Dropdown interaction
+  const sortBtn = document.getElementById('sort-trigger-btn');
+  const sortMenu = document.getElementById('sort-menu');
+  const sortLabel = document.getElementById('current-sort-label');
+  
+  if (sortBtn && sortMenu) {
+    sortBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sortMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.sort-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        const val = opt.getAttribute('data-value');
+        sortLabel.textContent = val;
+        document.querySelectorAll('.sort-option').forEach(o => {
+          o.classList.remove('bg-primary-fixed/40', 'text-primary', 'font-bold');
+          o.classList.add('text-on-surface');
+        });
+        opt.classList.add('bg-primary-fixed/40', 'text-primary', 'font-bold');
+        opt.classList.remove('text-on-surface');
+        sortMenu.classList.add('hidden');
+      });
+    });
+
+    document.addEventListener('click', () => {
+      if (!sortMenu.classList.contains('hidden')) {
+        sortMenu.classList.add('hidden');
+      }
+    });
+  }
+
+  // View Switcher (2-col grid vs 1-col large cards)
+  const gridBtn = document.getElementById('view-grid-btn');
+  const singleBtn = document.getElementById('view-single-btn');
+  const productGrid = document.getElementById('product-grid');
+
+  if (gridBtn && singleBtn && productGrid) {
+    gridBtn.addEventListener('click', () => {
+      productGrid.className = 'grid grid-cols-2 gap-x-gutter-mobile gap-y-space-md transition-all';
+      gridBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+      gridBtn.classList.remove('text-secondary');
+      singleBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+      singleBtn.classList.add('text-secondary');
+    });
+
+    singleBtn.addEventListener('click', () => {
+      productGrid.className = 'grid grid-cols-1 gap-y-space-md transition-all';
+      singleBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+      singleBtn.classList.remove('text-secondary');
+      gridBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+      gridBtn.classList.add('text-secondary');
+    });
+  }
+
+  // Wishlist heart micro-interaction
+  document.querySelectorAll('.wishlist-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isFilled = icon.style.fontVariationSettings?.includes("'FILL' 1");
+      
+      if (isFilled) {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        btn.classList.remove('text-primary');
+        btn.classList.add('text-on-surface-variant');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        btn.classList.add('text-primary');
+        btn.classList.remove('text-on-surface-variant');
+        
+        // Haptic-style pulse
+        btn.classList.add('scale-125');
+        setTimeout(() => btn.classList.remove('scale-125'), 200);
+      }
+    });
+  });
+
+  // Add to Bag Micro-Interaction & Toast
+  const toast = document.getElementById('toast');
+  const toastText = document.getElementById('toast-text');
+  let toastTimer;
+
+  document.querySelectorAll('.add-to-bag-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.product-card');
+      const title = card ? card.querySelector('h2')?.textContent : 'Item';
+      
+      // Animate Button state
+      const origHtml = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check</span><span class="text-[11px] font-bold text-tertiary">Added</span>';
+      setTimeout(() => {
+        btn.innerHTML = origHtml;
+      }, 1500);
+
+      // Trigger Toast
+      if (toast && toastText) {
+        toastText.textContent = `${title} added to bag`;
+        toast.classList.remove('opacity-0', 'translate-y-16', 'pointer-events-none');
+        toast.classList.add('opacity-100', 'translate-y-0');
+        
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-16', 'pointer-events-none');
+        }, 2400);
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_10px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-label-md"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex-1 flex flex-col items-center justify-center py-space-xs min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center py-space-xs min-h-[48px] transition-colors text-primary font-label-md" data-path="shop" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-sm text-label-sm">Shop</span></a><a class="flex-1 relative flex flex-col items-center justify-center py-space-xs min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="wishlist" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[14px] h-3.5 px-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[9px] leading-none">2</span></div><span class="font-label-sm text-label-sm">Wishlist</span></a><a class="flex-1 relative flex flex-col items-center justify-center py-space-xs min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[14px] h-3.5 px-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[9px] leading-none">3</span></div><span class="font-label-sm text-label-sm">Cart</span></a><a class="flex-1 flex flex-col items-center justify-center py-space-xs min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

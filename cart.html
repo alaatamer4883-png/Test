@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Your Shopping Bag — LUMEN Atelier</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <!-- Tailwind CSS Engine & Custom Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <!-- Shared Style System -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-full flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+  <!-- Fixed Top Header -->
+  <header class="fixed top-0 w-full z-50 glass-nav shadow-sm pt-safe">
+    <!-- Announcement Bar -->
+    <div class="bg-on-surface text-surface-container-lowest px-4 py-1.5 flex items-center justify-between font-label-sm text-[11px] tracking-widest uppercase">
+      <div class="lumen-container flex items-center justify-between w-full">
+        <span class="truncate">Complimentary Worldwide Express Freight over $150 | Code: <strong class="text-primary-fixed underline decoration-primary-fixed">LUMEN10</strong></span>
+        <div class="hidden sm:flex items-center gap-4 shrink-0">
+          <span class="text-surface-container-highest/70">Atelier Concierge: +1 (800) 492-0192</span>
+          <button aria-label="Currency" class="flex items-center gap-1 hover:text-primary-fixed transition-colors" type="button" onclick="showToast('Currency: USD ($)')">
+            <span>USD $</span>
+            <span class="material-symbols-outlined text-[13px]">expand_more</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="lumen-container h-20 flex items-center justify-between">
+      <!-- Back Arrow + Logo -->
+      <div class="flex items-center gap-3">
+        <a href="shop.html" aria-label="Continue Shopping" class="w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container rounded-full transition-all">
+          <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+        </a>
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <img alt="LUMEN Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/>
+          <span class="font-editorial text-2xl font-bold tracking-tight text-on-surface">LUMEN</span>
+        </a>
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+        <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors pb-1" data-path="home">Home</a>
+        <a href="shop.html" class="text-on-surface-variant hover:text-primary transition-colors pb-1" data-path="shop">Collection</a>
+        <a href="shop.html" class="text-on-surface-variant hover:text-primary transition-colors pb-1">Outerwear</a>
+        <a href="shop.html" class="text-on-surface-variant hover:text-primary transition-colors pb-1">Objects</a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button aria-label="Wishlist" class="relative w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary rounded-full hover:bg-surface-container transition-all" type="button" onclick="showToast('Your Saved Curations (2 pieces)', 'favorite')">
+          <span class="material-symbols-outlined text-[22px]">favorite</span>
+          <span class="wishlist-count-badge absolute top-1.5 right-1.5 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-none">2</span>
+        </button>
+
+        <a href="cart.html" aria-label="Cart" class="relative w-10 h-10 flex items-center justify-center text-primary rounded-full hover:bg-surface-container transition-all">
+          <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+          <span class="cart-count-badge absolute top-1.5 right-1.5 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-none">3</span>
+        </a>
+
+        <div class="pl-2 flex items-center cursor-pointer" onclick="showToast('Patron Account: Verified Atelier Member', 'person')">
+          <img alt="Patron" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20 hover:ring-primary transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pbn7AtDgkfq3byt9VdCD9s0doNwbzM5XNCN9gXYUhG_3eIsL8Lt_dy3Ejn0VLfPl2_TM3lQBsCh2R815PPGU7YgteSmramRL6Bkrf7V9CTQOEujdLKqZ9-MDBayu4iuedMbZcpYjphgrtP7icqAAnmKsvUxThNVNlJB1Mn090DZ7FG6jW3m5s8o1WSKrfV3n6GrernEQZN2p1bBtPZRyFdfiizIjlsDcugsmXHOV_rmO5vhlAb0J"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Body Content -->
+  <main class="flex-1 flex flex-col w-full pt-28 pb-24 bg-surface">
+    <div class="lumen-container">
+
+      <!-- Breadcrumbs -->
+      <div class="flex items-center gap-2 text-xs text-on-surface-variant mb-6 pb-2 border-b border-outline-variant/20">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <span>/</span>
+        <a href="shop.html" class="hover:text-primary">Collection</a>
+        <span>/</span>
+        <span class="text-on-surface font-semibold">Shopping Bag</span>
+      </div>
+
+      <!-- 2-Column Responsive Layout for Cart -->
+      <div class="lg:grid lg:grid-cols-12 lg:gap-10 lg:items-start mb-16">
+
+        <!-- LEFT COLUMN: Cart Items & Free Shipping Progress (8 Cols) -->
+        <div class="lg:col-span-8 flex flex-col gap-6">
+
+          <!-- Title Bar -->
+          <div class="flex items-baseline justify-between">
+            <div>
+              <span class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold block mb-1">Your Curated Selection</span>
+              <h1 class="font-editorial text-3xl sm:text-4xl text-on-surface font-semibold">
+                Shopping Bag <span class="font-body-md text-base text-on-surface-variant font-normal" id="cart-header-count">(3)</span>
+              </h1>
+            </div>
+            <button class="flex items-center gap-1.5 text-xs text-primary font-semibold hover:text-on-surface transition-colors" onclick="showToast('Bag stored in saved collection', 'bookmark')" type="button">
+              <span class="material-symbols-outlined text-[18px]">bookmark</span>
+              <span>Save for Later</span>
+            </button>
+          </div>
+
+          <!-- Free Shipping Progress Tracker -->
+          <div class="bg-surface-container rounded-2xl p-4 sm:p-5 border border-outline-variant/30">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <span class="flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 text-primary">
+                  <span class="material-symbols-outlined text-[16px]">local_shipping</span>
+                </span>
+                <span class="text-xs sm:text-sm font-semibold text-on-surface" id="shipping-progress-text">
+                  Add <strong class="text-primary font-bold">$38.00</strong> more for Free Express Delivery
+                </span>
+              </div>
+              <span class="text-xs font-bold text-primary" id="shipping-progress-percent">80%</span>
+            </div>
+            <div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden p-0.5">
+              <div class="bg-gradient-to-r from-primary to-primary-container h-full rounded-full transition-all duration-700 ease-out" id="shipping-progress-bar" style="width: 80%"></div>
+            </div>
+            <div class="flex items-center justify-between mt-2 text-xs text-on-surface-variant">
+              <span id="shipping-progress-ratio">$762.00 of $800.00</span>
+              <span class="text-tertiary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Standard Freight Unlocked
+              </span>
+            </div>
+          </div>
+
+          <!-- Dynamic Cart Items Container -->
+          <section aria-label="Cart Items" class="flex flex-col gap-4" id="cart-items-container">
+            <!-- Dynamically populated via renderCartPage() in js/main.js -->
+          </section>
+
+          <!-- Back to shopping link -->
+          <div class="pt-2">
+            <a href="shop.html" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-on-surface hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              <span>Continue Exploring Collection</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Order Summary & Checkout Actions (4 Cols Sticky) -->
+        <div class="lg:col-span-4 flex flex-col gap-5 lg:sticky lg:top-28">
+
+          <!-- Promo Voucher Card -->
+          <div class="bg-white rounded-2xl p-5 border border-outline-variant/30 shadow-xs">
+            <label class="font-label-sm text-xs uppercase tracking-widest text-on-surface-variant font-bold block mb-2" for="promo-input">
+              Privilege Pass / Voucher
+            </label>
+            <div class="flex gap-2">
+              <div class="relative flex-1">
+                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">sell</span>
+                <input class="w-full h-11 pl-9 pr-3 rounded-xl bg-surface-container-low text-xs text-on-surface uppercase tracking-wider focus:outline-none focus:bg-surface-container font-semibold" id="promo-input" placeholder="e.g. LUMEN10" type="text" value="LUMEN10"/>
+              </div>
+              <button class="h-11 px-4 rounded-xl bg-on-surface text-surface text-xs font-bold uppercase tracking-wider hover:bg-primary active:scale-95 transition-all shadow-xs" id="apply-promo-btn" type="button">
+                Apply
+              </button>
+            </div>
+            
+            <div class="hidden flex items-center justify-between mt-3 px-3 py-2 bg-tertiary-fixed/30 rounded-xl" id="applied-tag">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-tertiary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                <span class="text-xs font-bold text-on-tertiary-fixed tracking-wider">PROMO ACTIVE</span>
+              </div>
+              <button aria-label="Remove promo code" class="text-on-tertiary-fixed hover:text-error transition-colors p-1" id="remove-promo-btn" type="button">
+                <span class="material-symbols-outlined text-[16px]">close</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Order Summary Card -->
+          <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-xs flex flex-col gap-4">
+            <h2 class="font-editorial text-xl font-bold text-on-surface pb-2 border-b border-outline-variant/20">
+              Order Summary
+            </h2>
+            
+            <div class="flex flex-col gap-2.5 text-sm">
+              <div class="flex justify-between items-center text-on-surface-variant">
+                <span>Subtotal</span>
+                <span class="font-semibold text-on-surface" id="summary-subtotal">$667.00</span>
+              </div>
+              <div class="hidden flex justify-between items-center text-primary" id="summary-discount-row">
+                <span>Member Privilege Savings</span>
+                <span class="font-bold" id="summary-discount">-$66.70</span>
+              </div>
+              <div class="flex justify-between items-center text-on-surface-variant">
+                <span>Estimated Shipping</span>
+                <span class="text-tertiary font-bold tracking-wide" id="summary-shipping">FREE</span>
+              </div>
+              <div class="flex justify-between items-center text-on-surface-variant">
+                <span>Estimated NY State Tax</span>
+                <span class="text-on-surface font-semibold" id="summary-tax">$53.28</span>
+              </div>
+              
+              <div class="h-px bg-outline-variant/20 my-1"></div>
+              
+              <div class="flex justify-between items-baseline pt-1">
+                <div>
+                  <span class="font-editorial text-base font-bold text-on-surface block">Total Due</span>
+                  <span class="text-[11px] text-on-surface-variant">All tariffs and carbon offset included</span>
+                </div>
+                <span class="font-editorial text-2xl font-bold text-primary tracking-tight" id="summary-total">$653.58</span>
+              </div>
+            </div>
+
+            <!-- Primary Checkout CTA -->
+            <a href="checkout.html" class="w-full h-12 bg-primary text-white rounded-xl font-label-md text-xs uppercase tracking-wider font-bold flex items-center justify-between px-6 shadow-md hover:bg-primary-hover active:scale-[0.98] transition-all mt-2">
+              <span class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px]">lock</span>
+                <span>Proceed to Checkout</span>
+              </span>
+              <span class="font-bold" id="btn-total-amount">$653.58</span>
+            </a>
+
+            <!-- Express Checkout 1-Click Buttons -->
+            <div class="grid grid-cols-3 gap-2 pt-1">
+              <a href="checkout.html" aria-label="Apple Pay" class="h-10 rounded-xl bg-inverse-surface text-white flex items-center justify-center font-bold text-xs hover:opacity-90 active:scale-95 transition-all shadow-xs">
+                 Pay
+              </a>
+              <a href="checkout.html" aria-label="Google Pay" class="h-10 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/30 flex items-center justify-center font-bold text-xs hover:bg-surface-container active:scale-95 transition-all shadow-xs">
+                G Pay
+              </a>
+              <a href="checkout.html" aria-label="PayPal" class="h-10 rounded-xl bg-[#003087] text-white flex items-center justify-center font-bold italic text-xs hover:opacity-90 active:scale-95 transition-all shadow-xs">
+                PayPal
+              </a>
+            </div>
+
+            <!-- Guarantees -->
+            <div class="pt-3 border-t border-outline-variant/20 grid grid-cols-2 gap-2 text-[11px] text-on-surface-variant">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+                <span>256-Bit SSL Encrypted</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+                <span>30-Day Easy Returns</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Complete Luxury Footer -->
+  <footer class="bg-surface-container-low border-t border-outline-variant/30 pt-16 pb-24 md:pb-16 text-on-surface">
+    <div class="lumen-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img alt="LUMEN Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/>
+          <span class="font-editorial text-2xl font-bold tracking-tight">LUMEN</span>
+        </div>
+        <p class="font-body-sm text-sm text-on-surface-variant leading-relaxed max-w-sm mb-6">
+          Architectural silhouettes, raw unbleached natural fibers, and tactile interior artifacts handcrafted for deliberate living.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">Curated Spheres</h4>
+        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Outerwear &amp; Coats</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Mongolian Cashmere</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Stoneware Ceramics</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Botanical Scents</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">Client Care</h4>
+        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+          <li><a href="cart.html" class="hover:text-primary transition-colors">Order Status &amp; Tracking</a></li>
+          <li><a href="#" onclick="showToast('Complimentary 30-day returns accepted'); return false;" class="hover:text-primary transition-colors">Returns &amp; Exchanges</a></li>
+          <li><a href="product-detail.html" class="hover:text-primary transition-colors">Garment Size Guide</a></li>
+          <li><a href="#" onclick="showToast('Contact: concierge@lumen-lifestyle.com'); return false;" class="hover:text-primary transition-colors">Atelier Concierge</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">LUMEN Journal</h4>
+        <p class="text-xs text-on-surface-variant mb-3">
+          Receive seasonal atelier invitations and private 15% privilege access.
+        </p>
+        <form class="space-y-2" onsubmit="event.preventDefault(); showToast('Welcome! Privilege LUMEN15 unlocked.');">
+          <input class="w-full h-10 px-3 rounded-lg bg-white border border-outline-variant/30 text-xs text-on-surface focus:outline-none focus:border-primary" placeholder="Enter your email" type="email" required/>
+          <button class="w-full h-10 bg-primary text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-primary-hover active:scale-95 transition-all shadow-xs" type="submit">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="lumen-container pt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <span>© 2026 LUMEN Atelier Storefront Inc. All rights reserved.</span>
+      <div class="flex items-center gap-6">
+        <span class="hover:text-on-surface cursor-pointer">Privacy Policy</span>
+        <span class="hover:text-on-surface cursor-pointer">Terms of Service</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Navigation Bar (Hidden on Desktop) -->
+  <nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_10px_rgba(0,0,0,0.05)] border-t border-outline-variant/30" data-active-classes="text-primary font-label-md">
+    <div class="h-16 px-4 flex items-center justify-around">
+      <a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface" data-path="home" href="index.html">
+        <span class="material-symbols-outlined text-[24px]">home</span>
+        <span class="text-[11px]">Home</span>
+      </a>
+      <a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface" data-path="shop" href="shop.html">
+        <span class="material-symbols-outlined text-[24px]">grid_view</span>
+        <span class="text-[11px]">Shop</span>
+      </a>
+      <a class="flex-1 relative flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface" data-path="wishlist" href="#" onclick="showToast('Curated Wishlist (2)', 'favorite'); return false;">
+        <div class="relative flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">favorite</span>
+          <span class="wishlist-count-badge absolute -top-1 -right-2 flex items-center justify-center min-w-[14px] h-3.5 px-0.5 rounded-full bg-primary text-white text-[9px] leading-none">2</span>
+        </div>
+        <span class="text-[11px]">Wishlist</span>
+      </a>
+      <a aria-current="page" class="flex-1 relative flex flex-col items-center justify-center py-1 text-primary font-semibold" data-path="cart" href="cart.html">
+        <div class="relative flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+          <span class="cart-count-badge absolute -top-1 -right-2 flex items-center justify-center min-w-[14px] h-3.5 px-0.5 rounded-full bg-primary text-white text-[9px] leading-none">3</span>
+        </div>
+        <span class="text-[11px]">Cart</span>
+      </a>
+      <a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface" data-path="profile" href="#" onclick="showToast('Signed in as Verified Patron', 'person'); return false;">
+        <span class="material-symbols-outlined text-[24px]">person</span>
+        <span class="text-[11px]">Profile</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="js/main.js"></script>
+</body>
+</html>

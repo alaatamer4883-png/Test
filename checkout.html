@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Encrypted Checkout — LUMEN Atelier</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <!-- Tailwind CSS Engine & Custom Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <!-- Shared Style System -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-full flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+  <!-- Fixed Top Header -->
+  <header class="fixed top-0 w-full z-50 glass-nav shadow-sm pt-safe">
+    <div class="lumen-container h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="cart.html" aria-label="Back to Cart" class="w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container rounded-full transition-all">
+          <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+        </a>
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <img alt="LUMEN Logo" class="h-8 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/>
+          <span class="font-editorial text-2xl font-bold tracking-tight text-on-surface">LUMEN</span>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-2 text-tertiary font-label-md text-xs font-semibold bg-tertiary-fixed/30 px-3 py-1.5 rounded-full">
+        <span class="material-symbols-outlined text-[16px]">lock</span>
+        <span>256-Bit SSL Encrypted Checkout</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Body Content -->
+  <main class="flex-1 flex flex-col w-full pt-24 pb-28 bg-surface">
+    <div class="lumen-container">
+
+      <!-- Breadcrumbs -->
+      <div class="flex items-center gap-2 text-xs text-on-surface-variant mb-6 pb-2 border-b border-outline-variant/20">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <span>/</span>
+        <a href="cart.html" class="hover:text-primary">Shopping Bag</a>
+        <span>/</span>
+        <span class="text-on-surface font-semibold">Encrypted Checkout</span>
+      </div>
+
+      <!-- 2-Column Responsive Checkout Grid (Balanced Desktop Layout) -->
+      <div class="lg:grid lg:grid-cols-12 lg:gap-10 lg:items-start mb-16">
+
+        <!-- LEFT COLUMN: Checkout Form Steps (7 Cols) -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+
+          <!-- Stepper Progress Tracker -->
+          <div class="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/20 flex items-center justify-between shadow-xs">
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-full bg-tertiary text-white flex items-center justify-center text-xs">
+                <span class="material-symbols-outlined text-[14px]">check</span>
+              </div>
+              <span class="font-label-sm text-xs text-tertiary uppercase tracking-wider font-bold">1. Shipping</span>
+            </div>
+            <div class="h-0.5 flex-1 max-w-[60px] bg-tertiary/40 rounded-full mx-2"></div>
+            
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-full bg-tertiary text-white flex items-center justify-center text-xs">
+                <span class="material-symbols-outlined text-[14px]">check</span>
+              </div>
+              <span class="font-label-sm text-xs text-tertiary uppercase tracking-wider font-bold">2. Courier</span>
+            </div>
+            <div class="h-0.5 flex-1 max-w-[60px] bg-primary rounded-full mx-2"></div>
+            
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs">
+                3
+              </div>
+              <span class="font-label-sm text-xs text-primary font-bold uppercase tracking-wider">3. Payment</span>
+            </div>
+          </div>
+
+          <!-- Express Fast-Lane -->
+          <div class="bg-white rounded-2xl p-5 border border-outline-variant/30 shadow-xs">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs uppercase tracking-wider text-on-surface-variant font-bold">Instant Express Checkout</span>
+              <span class="inline-flex items-center gap-1 text-tertiary text-xs font-semibold">
+                <span class="material-symbols-outlined text-[15px]">bolt</span> 1-Click Biometric
+              </span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <button class="h-12 rounded-xl bg-inverse-surface text-white flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all font-bold text-sm shadow-xs" type="button" onclick="showToast('Apple Pay authorization initialized')">
+                <span> Pay</span>
+              </button>
+              <button class="h-12 rounded-xl bg-tertiary text-white flex items-center justify-center gap-1.5 hover:opacity-90 active:scale-[0.98] transition-all font-bold text-sm shadow-xs" type="button" onclick="showToast('Shop Pay authorization initialized')">
+                <span class="font-editorial italic lowercase">shop</span>
+                <span class="uppercase tracking-wider">Pay</span>
+              </button>
+            </div>
+            <div class="relative flex py-3 items-center">
+              <div class="flex-grow h-px bg-outline-variant/20"></div>
+              <span class="flex-shrink mx-3 text-on-surface-variant text-[11px] uppercase tracking-widest font-semibold">or pay with card below</span>
+              <div class="flex-grow h-px bg-outline-variant/20"></div>
+            </div>
+          </div>
+
+          <!-- Step 1 Recap: Delivery Address -->
+          <div class="bg-white rounded-2xl p-5 border border-outline-variant/30 shadow-xs">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-2">
+                <div class="w-5 h-5 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[14px]">done</span>
+                </div>
+                <span class="text-xs uppercase tracking-wider text-on-surface-variant font-bold">1. Delivery Address</span>
+              </div>
+              <button class="text-primary hover:underline text-xs font-semibold transition-colors" type="button" onclick="showToast('Edit address modal')">
+                Change
+              </button>
+            </div>
+            <div class="mt-2 pl-7 space-y-0.5">
+              <p class="text-sm font-bold text-on-surface">Sarah Jenkins <span class="text-xs font-normal text-on-surface-variant">• +1 (555) 234-8901</span></p>
+              <p class="text-xs text-on-surface-variant">742 Evergreen Terrace, Apt 4B, Brooklyn, NY 11201, United States</p>
+            </div>
+          </div>
+
+          <!-- Step 2 Recap: Courier Method -->
+          <div class="bg-white rounded-2xl p-5 border border-outline-variant/30 shadow-xs">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <div class="w-5 h-5 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[14px]">done</span>
+                </div>
+                <span class="text-xs uppercase tracking-wider text-on-surface-variant font-bold">2. Courier Method</span>
+              </div>
+              <span class="text-xs text-tertiary font-semibold">Climate Neutral Certified</span>
+            </div>
+
+            <div class="space-y-2">
+              <label class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low border border-primary/20 cursor-pointer transition-colors" id="option-delivery-express">
+                <div class="flex items-center gap-3">
+                  <input checked class="accent-primary w-4 h-4 text-primary" name="delivery_method" type="radio" value="express"/>
+                  <div>
+                    <p class="text-xs sm:text-sm font-semibold text-on-surface">Express Carbon-Neutral Courier</p>
+                    <p class="text-[11px] text-on-surface-variant">1–2 Business Days • Real-time SMS dispatch alerts</p>
+                  </div>
+                </div>
+                <span class="text-xs text-tertiary font-bold">FREE</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3 rounded-xl bg-white border border-outline-variant/30 hover:bg-surface-container-low cursor-pointer transition-colors" id="option-delivery-overnight">
+                <div class="flex items-center gap-3">
+                  <input class="accent-primary w-4 h-4 text-primary" name="delivery_method" type="radio" value="overnight"/>
+                  <div>
+                    <p class="text-xs sm:text-sm font-semibold text-on-surface">Next-Day Priority Morning (White Glove)</p>
+                    <p class="text-[11px] text-on-surface-variant">Before 10:30 AM with signature confirmation</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-on-surface">+$25.00</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 3: Payment Solution Tabs -->
+          <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-xs space-y-4">
+            <div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">
+                  3
+                </div>
+                <h3 class="font-editorial text-lg font-bold text-on-surface">Payment Solution</h3>
+              </div>
+              <div class="flex items-center gap-1 text-tertiary text-xs">
+                <span class="material-symbols-outlined text-[16px]">lock</span>
+                <span>Encrypted Session</span>
+              </div>
+            </div>
+
+            <!-- Tab 1: Credit / Debit Card -->
+            <div class="rounded-xl overflow-hidden bg-surface-container-low border border-primary/20 transition-all" id="pay-card-wrapper">
+              <button class="w-full p-4 flex items-center justify-between text-left focus:outline-none" onclick="selectPaymentTab('card')" type="button">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-[24px]">credit_card</span>
+                  <div>
+                    <p class="text-sm font-bold text-on-surface">Credit or Debit Card</p>
+                    <p class="text-xs text-on-surface-variant">Visa, Mastercard, American Express supported</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="px-2 py-0.5 rounded bg-white text-[10px] font-bold text-on-surface border border-outline-variant/30 shadow-xs" id="badge-visa">VISA</span>
+                  <span class="px-2 py-0.5 rounded bg-white text-[10px] font-bold text-on-surface border border-outline-variant/30 shadow-xs" id="badge-master">MC</span>
+                  <span class="px-2 py-0.5 rounded bg-white text-[10px] font-bold text-on-surface border border-outline-variant/30 shadow-xs" id="badge-amex">AMEX</span>
+                </div>
+              </button>
+
+              <div class="p-5 pt-0 space-y-3" id="payment-body-card">
+                <div class="space-y-1">
+                  <label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider flex justify-between">
+                    <span>Card Number</span>
+                    <span class="text-primary font-bold lowercase tracking-normal" id="card-type-detected"></span>
+                  </label>
+                  <div class="relative">
+                    <input class="w-full h-12 px-4 bg-white rounded-xl text-sm font-semibold text-on-surface placeholder:text-outline-variant border border-outline-variant/30 focus:outline-none focus:border-primary shadow-xs transition-colors" id="input-card" inputmode="numeric" maxlength="19" placeholder="4242 •••• •••• 4242" type="tel"/>
+                    <span class="material-symbols-outlined absolute right-3.5 top-3.5 text-on-surface-variant text-[20px]">contactless</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="space-y-1">
+                    <label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Expiry Date</label>
+                    <input class="w-full h-12 px-4 bg-white rounded-xl text-sm font-semibold text-on-surface placeholder:text-outline-variant border border-outline-variant/30 focus:outline-none focus:border-primary shadow-xs transition-colors" id="input-expiry" inputmode="numeric" maxlength="7" placeholder="MM / YY" type="tel"/>
+                  </div>
+                  <div class="space-y-1">
+                    <label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider flex justify-between">
+                      <span>CVV / CVC</span>
+                      <span class="material-symbols-outlined text-[15px] text-on-surface-variant cursor-pointer" title="3 or 4 digits">info</span>
+                    </label>
+                    <input class="w-full h-12 px-4 bg-white rounded-xl text-sm font-semibold text-on-surface placeholder:text-outline-variant border border-outline-variant/30 focus:outline-none focus:border-primary shadow-xs transition-colors" id="input-cvv" inputmode="numeric" maxlength="4" placeholder="•••" type="password"/>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <label class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Cardholder Full Name</label>
+                  <input class="w-full h-12 px-4 bg-white rounded-xl text-sm font-semibold text-on-surface uppercase border border-outline-variant/30 focus:outline-none focus:border-primary shadow-xs transition-colors" type="text" value="SARAH JENKINS"/>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Tabby / Klarna -->
+            <div class="rounded-xl overflow-hidden bg-white border border-outline-variant/30 transition-all" id="pay-bnpl-wrapper">
+              <button class="w-full p-4 flex items-center justify-between text-left focus:outline-none" onclick="selectPaymentTab('bnpl')" type="button">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-secondary text-[24px]">splitscreen</span>
+                  <div>
+                    <p class="text-sm font-bold text-on-surface">Buy Now, Pay Later (Tabby / Klarna)</p>
+                    <p class="text-xs text-on-surface-variant">4 equal interest-free monthly installments</p>
+                  </div>
+                </div>
+                <span class="badge-lumen bg-surface-container text-on-surface">0% APR</span>
+              </button>
+              <div class="hidden p-4 pt-0 text-xs text-on-surface-variant leading-relaxed" id="payment-body-bnpl">
+                <p>Billed automatically every 2 weeks with 0% interest and zero surprise fees.</p>
+              </div>
+            </div>
+
+            <!-- Tab 3: Digital Wallet -->
+            <div class="rounded-xl overflow-hidden bg-white border border-outline-variant/30 transition-all" id="pay-wallet-wrapper">
+              <button class="w-full p-4 flex items-center justify-between text-left focus:outline-none" onclick="selectPaymentTab('wallet')" type="button">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-secondary text-[24px]">account_balance_wallet</span>
+                  <div>
+                    <p class="text-sm font-bold text-on-surface">Digital Wallet (Apple Pay / GPay)</p>
+                    <p class="text-xs text-on-surface-variant">Biometric instant authorization</p>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+              </button>
+              <div class="hidden p-4 pt-0 text-xs text-on-surface-variant" id="payment-body-wallet">
+                <p>You will authenticate your pre-saved cards with biometrics directly when clicking Place Order.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Sticky Order Summary & Place Order CTA (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col gap-5 lg:sticky lg:top-28">
+
+          <!-- Order Summary Card -->
+          <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-xs flex flex-col gap-4">
+            <div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+              <div>
+                <h3 class="font-editorial text-xl font-bold text-on-surface" id="summary-items-count">Order Summary</h3>
+                <span class="text-xs text-on-surface-variant">Verified Atelier Dispatch</span>
+              </div>
+              <span class="badge-lumen bg-primary-fixed text-on-primary-fixed">Free Express</span>
+            </div>
+
+            <!-- List of Items in Order (Populated via setupCheckoutPage()) -->
+            <div class="space-y-2 text-xs divide-y divide-outline-variant/20 max-h-60 overflow-y-auto no-scrollbar" id="checkout-items-list">
+              <!-- Dynamically rendered -->
+            </div>
+
+            <!-- Calculations Breakdown -->
+            <div class="pt-3 border-t border-outline-variant/20 space-y-2 text-sm text-on-surface-variant">
+              <div class="flex justify-between items-center">
+                <span>Standard Delivery Freight</span>
+                <span class="text-tertiary font-bold">FREE</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Estimated NY State Sales Tax</span>
+                <span class="text-on-surface font-semibold" id="checkout-tax-val">$53.28</span>
+              </div>
+              <div class="h-px bg-outline-variant/20 my-1"></div>
+              <div class="flex justify-between items-baseline pt-1">
+                <div>
+                  <span class="font-editorial text-base font-bold text-on-surface block">Final Total Due</span>
+                  <span class="text-[11px] text-on-surface-variant">Duties and carbon offset included</span>
+                </div>
+                <span class="font-editorial text-2xl font-bold text-primary" id="checkout-final-total">$653.58</span>
+              </div>
+            </div>
+
+            <!-- Place Order CTA Button -->
+            <button class="w-full h-12 bg-primary text-white rounded-xl font-label-md text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2 shadow-md hover:bg-primary-hover active:scale-[0.98] transition-all mt-2" id="place-order-cta" type="button">
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+              <span>Place Order Securely</span>
+            </button>
+
+            <!-- Security Badges -->
+            <div class="pt-3 border-t border-outline-variant/20 grid grid-cols-2 gap-2 text-[11px] text-on-surface-variant">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+                <span>256-Bit SSL Encrypted</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+                <span>30-Day Easy Returns</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Complete Luxury Footer -->
+  <footer class="bg-surface-container-low border-t border-outline-variant/30 pt-16 pb-24 md:pb-16 text-on-surface">
+    <div class="lumen-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img alt="LUMEN Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/>
+          <span class="font-editorial text-2xl font-bold tracking-tight">LUMEN</span>
+        </div>
+        <p class="font-body-sm text-sm text-on-surface-variant leading-relaxed max-w-sm mb-6">
+          Architectural silhouettes, raw unbleached natural fibers, and tactile interior artifacts handcrafted for deliberate living.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">Curated Spheres</h4>
+        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Outerwear &amp; Coats</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Mongolian Cashmere</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Stoneware Ceramics</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Botanical Scents</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">Client Care</h4>
+        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+          <li><a href="cart.html" class="hover:text-primary transition-colors">Order Status &amp; Tracking</a></li>
+          <li><a href="#" onclick="showToast('Complimentary 30-day returns accepted'); return false;" class="hover:text-primary transition-colors">Returns &amp; Exchanges</a></li>
+          <li><a href="product-detail.html" class="hover:text-primary transition-colors">Garment Size Guide</a></li>
+          <li><a href="#" onclick="showToast('Contact: concierge@lumen-lifestyle.com'); return false;" class="hover:text-primary transition-colors">Atelier Concierge</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">LUMEN Journal</h4>
+        <p class="text-xs text-on-surface-variant mb-3">
+          Receive seasonal atelier invitations and private 15% privilege access.
+        </p>
+        <form class="space-y-2" onsubmit="event.preventDefault(); showToast('Welcome! Privilege LUMEN15 unlocked.');">
+          <input class="w-full h-10 px-3 rounded-lg bg-white border border-outline-variant/30 text-xs text-on-surface focus:outline-none focus:border-primary" placeholder="Enter your email" type="email" required/>
+          <button class="w-full h-10 bg-primary text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-primary-hover active:scale-95 transition-all shadow-xs" type="submit">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="lumen-container pt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <span>© 2026 LUMEN Atelier Storefront Inc. All rights reserved.</span>
+      <div class="flex items-center gap-6">
+        <span class="hover:text-on-surface cursor-pointer">Privacy Policy</span>
+        <span class="hover:text-on-surface cursor-pointer">Terms of Service</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="js/main.js"></script>
+  <script>
+    function selectPaymentTab(tab) {
+      const bodies = {
+        card: document.getElementById('payment-body-card'),
+        bnpl: document.getElementById('payment-body-bnpl'),
+        wallet: document.getElementById('payment-body-wallet')
+      };
+      const wrappers = {
+        card: document.getElementById('pay-card-wrapper'),
+        bnpl: document.getElementById('pay-bnpl-wrapper'),
+        wallet: document.getElementById('pay-wallet-wrapper')
+      };
+
+      Object.keys(bodies).forEach(k => {
+        if (k === tab) {
+          bodies[k]?.classList.remove('hidden');
+          wrappers[k]?.classList.add('bg-surface-container-low', 'border-primary/20');
+          wrappers[k]?.classList.remove('bg-white', 'border-outline-variant/30');
+        } else {
+          bodies[k]?.classList.add('hidden');
+          wrappers[k]?.classList.remove('bg-surface-container-low', 'border-primary/20');
+          wrappers[k]?.classList.add('bg-white', 'border-outline-variant/30');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

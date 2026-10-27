@@ -1,0 +1,45 @@
+# E-Commerce UI/UX Design Specification & Brief
+## Project Overview
+Create a seamless, user-centric, and high-converting UI/UX design for a comprehensive e-commerce platform. The design must be modern, responsive (Mobile-First approach), intuitive, and visually aligned with the brand identity.
+---
+## 1. Information Architecture & Key Pages
+### A. Homepage
+* Top Announcement Bar: Offers, free shipping thresholds, currency/language selector.
+* Header / Navigation: Brand logo, sticky search bar (with auto-suggestions), category menu, wishlist, cart icon with item badge, and user account/login.
+* Hero Section: Dynamic banner slider featuring promotions, top collections, and strong CTAs ("Shop Now").
+* Featured Categories: Visual grid/carousel of top product categories.
+* Product Carousels: Best Sellers, New Arrivals, Special Offers.
+* Social Proof / Reviews: Customer ratings, testimonial carousel, and Instagram feed integration.
+* Footer: Newsletter signup, quick links (About Us, FAQs, Return Policy, Terms), accepted payment icons, and social media links.
+### B. Product Listing Page (PLP)
+* Filtering & Sorting System: Filter by price range, size, color, rating, availability, and brand. Sort by "Relevance," "Price: Low to High," "Newest," etc.
+* Product Grid: Responsive grid cards displaying:
+  * Product image with hover preview / image carousel.
+  * Product title & rating stars.
+  * Price & discount percentage badge.
+  * Quick "Add to Cart" and "Add to Wishlist" action buttons.
+### C. Product Detail Page (PDP)
+* Media Gallery: High-resolution image zoom, thumbnail selector, and product video support.
+* Product Details: Title, price, tax breakdown, stock status, and short description.
+* Variants Selector: Interactive color swatches and size pickers with a Size Guide modal.
+* Call to Action: Clear, primary "Add to Cart" and "Buy Now" sticky buttons.
+* Trust Badges: Shipping estimates, easy returns guarantee, and secure checkout icons.
+* Expanded Info Accordion: Full description, specifications, care instructions, and customer reviews.
+* Cross-Selling: "Frequently Bought Together" & "Recommended Products" sections.
+### D. Shopping Cart Page / Drawer
+* Itemized List: Image, title, selected variant, quantity selector (+/-), item price, and clear delete option.
+* Order Summary: Subtotal, estimated shipping/taxes, promo code input field, and clear "Proceed to Checkout" CTA.
+### E. Checkout Process (Multi-Step / Single-Page)
+1. Shipping & Contact: Guest checkout option, saved address selector, and email/phone input.
+2. Delivery Methods: Standard vs. Express shipping options with real-time costs.
+3. Payment Options: Credit/Debit card form, local wallets, Buy Now Pay Later (e.g., Tabby/Tamara), or Cash on Delivery.
+4. Order Review: Final summary of items and cost breakdown before clicking "Place Order."
+### F. Order Confirmation & User Dashboard
+* Confirmation Page: Clear order success message, order tracking ID, estimated delivery date, and order summary.
+* Customer Dashboard: Order history with status updates (Processing, Shipped, Delivered), saved addresses, payment methods, and saved wishlist items.
+---
+## 2. Key UX & UI Guidelines
+* Design System: Consistent color palette, clear typography scale, cohesive icon set, and standardized button states.
+* Mobile-First Design: Optimized touch targets, thumb-friendly navigation, sticky bottom action bars.
+* Accessibility (WCAG Compliant): High contrast, legible typography.
+* Micro-interactions: Smooth transitions, cart animations, heart toggles.

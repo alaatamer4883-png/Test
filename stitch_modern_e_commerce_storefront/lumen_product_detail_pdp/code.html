@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#a04100", "primary": "#9c3f00", "tertiary": "#38654d", "inverse-surface": "#303036", "on-secondary-fixed": "#1c1b1b", "on-primary-container": "#fffbff", "on-tertiary-fixed": "#002112", "on-background": "#1b1b21", "on-primary-fixed-variant": "#7a3000", "secondary-container": "#e5e2e1", "tertiary-fixed-dim": "#a1d1b4", "on-surface": "#1b1b21", "error-container": "#ffdad6", "tertiary-fixed": "#bceecf", "on-secondary-fixed-variant": "#474646", "tertiary-container": "#507e65", "primary-fixed-dim": "#ffb693", "error": "#ba1a1a", "on-surface-variant": "#574239", "surface": "#fbf8ff", "surface-container-low": "#f5f2fb", "inverse-primary": "#ffb693", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#224f39", "on-error-container": "#93000a", "secondary-fixed": "#e5e2e1", "on-secondary-container": "#656464", "secondary": "#5f5e5e", "background": "#fbf8ff", "on-error": "#ffffff", "on-primary-fixed": "#341000", "on-secondary": "#ffffff", "surface-variant": "#e4e1ea", "surface-container": "#efecf5", "on-tertiary-container": "#f6fff6", "surface-container-high": "#eae7ef", "outline-variant": "#dec0b4", "surface-bright": "#fbf8ff", "surface-container-lowest": "#ffffff", "surface-dim": "#dbd9e1", "secondary-fixed-dim": "#c8c6c5", "inverse-on-surface": "#f2eff8", "on-primary": "#ffffff", "surface-container-highest": "#e4e1ea", "primary-fixed": "#ffdbcb", "primary-container": "#c05410", "outline": "#8b7267" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "gutter": "1rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "title-editorial": ["Bodoni Moda"], "headline-lg": ["Bodoni Moda"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "display-hero": ["Bodoni Moda"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Bodoni Moda"], "display-hero-mobile": ["Bodoni Moda"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "title-editorial": ["16px", { "lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-hero": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface antialiased min-h-full flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="LUMEN Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-space-xs">Product Details</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Share" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pbn7AtDgkfq3byt9VdCD9s0doNwbzM5XNCN9gXYUhG_3eIsL8Lt_dy3Ejn0VLfPl2_TM3lQBsCh2R815PPGU7YgteSmramRL6Bkrf7V9CTQOEujdLKqZ9-MDBayu4iuedMbZcpYjphgrtP7icqAAnmKsvUxThNVNlJB1Mn090DZ7FG6jW3m5s8o1WSKrfV3n6GrernEQZN2p1bBtPZRyFdfiizIjlsDcugsmXHOV_rmO5vhlAb0J"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-28">
+<!-- Media Carousel Gallery -->
+<section class="relative w-full bg-surface-container-low overflow-hidden">
+<!-- Carousel Slides Track -->
+<div class="flex w-full overflow-x-auto snap-x snap-mandatory scroll-smooth touch-pan-x" id="pdpGallery" style="scrollbar-width: none; -ms-overflow-style: none;">
+<!-- Slide 1: Main Editorial Lifestyle -->
+<div class="min-w-full snap-start relative aspect-[4/5] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Editorial fashion photography of a model wearing an oversized double-faced warm camel cashmere overcoat in a bright brutalist architectural concrete courtyard. Warm natural morning sunlight, cinematic shadows, high fashion styling, textured luxury wool drape, minimalist warm tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXtEzxfmQtnCZ3Rv3EyrihiOyNfYBT9buADdi7XQbx9VxH4mX-h0mxJJUFORJmIMM34cEV69NuDGFlMRAC5BBXX08amBWnpmrL0r3UKkAmTGtshUE9aLgy2P4ihSQsRxaYTsnjhWs221YZpFAaZaj8SmRJEh3oYHpmcrgXFMrN2tS3HMPiQvSrJ4L-Ep2P88oCoCDZhOL95SE_QBPMuWa9799V6KFBU2jir9ui-EKIOy8z9ETfoaII"/>
+<div class="absolute bottom-4 left-4 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface text-[10px] uppercase tracking-widest font-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">verified</span>
+          Editorial Lookbook
+        </div>
+</div>
+<!-- Slide 2: Fabric & Texture Macro -->
+<div class="min-w-full snap-start relative aspect-[4/5] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Extreme close-up macro studio shot of premium double-faced Mongolian cashmere fabric in warm camel tone. Hand-stitched split edge details visible, ultra soft brushed fiber texture, soft studio rim lighting highlighting bespoke artisanal tailoring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASZxRlYTf7JiyXTqkbbdtW97MHBDmL1iHRgdF8VTaptfaA-cvPAyoKrEBB-XlMZrLoftI-jfX-NKPXsuY9FY9zNaCTc1nEs4BGNtyc8s9YwgpGIThAErIJ9YTsEqI6QCdPlnokJ1A32u7huGQXxMd4d4Cew2ovaYIE5qvINDdblDz8ee7Arr4S6MLvoX5b5iLYRBiwH1jhFOWLVNbdlxEjl0WKNzR6neeWBgVuLoNDAPH9fsAgdmC3"/>
+<div class="absolute bottom-4 left-4 bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface text-[10px] uppercase tracking-widest font-label-sm px-2.5 py-1 rounded-full">
+          100% Raw Mongolian Fiber
+        </div>
+</div>
+<!-- Slide 3: Movement & Lapel Silhouette (Video Badge) -->
+<div class="min-w-full snap-start relative aspect-[4/5] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Mid-stride street style fashion capture of the model turning, showing the clean sweeping drape and structured notched lapels of the camel overcoat. Soft overcast Copenhagen aesthetic, minimal luxury background, fluid movement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxTl4MaAMHzd1dhJNWOuBj_Jhv6O4-XH5SIObe1PW60xworl99FTmmJFiNEj3sUq7LbBGafWq4TBT_JNMU2GWAYN9MI1-usDXqZiPm1mD6xOt7LXeUIZf-8A3QZlaDIjy7tZ91J4rMlIfq-DnTWa6ePMTP7F4md8RjIzNfoqYEMYT0gwqNujDe6dNPP-SYnZUuLoTWQXeBpBjg0XTgBMymrAKtaogGO45CphsN405m0tcd68lvbxx6"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Runway Motion</span>
+</div>
+</div>
+<!-- Slide 4: Interior Construction & Pockets -->
+<div class="min-w-full snap-start relative aspect-[4/5] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Minimalist indoor studio shot displaying the inner tailored construction of the cashmere overcoat hung elegantly on a dark matte wood hanger. Horn buttons, horn button closure, invisible inner pocket detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_uAEeVTn9GlHPzgcIkSsN4q1_gz3Z4LfxZvSQmmk0FfbJ8zZpjG9NqiIMo4oxWGsljrnV0FxKzp4-7vSFYqkd-vh3xQXBxE94z9zjUL-wYiqSpB92I4IBTfe25j7LHhWhCCN8kbQSSP2eJ8ky32SUqm34hVGCCQ5uo1jX8ttw0vxYmebvwxcyfskYPLwoLPvKYE2HNzE-I5Um5tkoapOlPhQ52_UV_0BR4K-Z4Ul5kzPehRD1jMfZ"/>
+</div>
+<!-- Slide 5: Back Silhouette & Deep Vent -->
+<div class="min-w-full snap-start relative aspect-[4/5] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Rear editorial view of high fashion model walking away in clean architectural corridor showcasing center back split vent of the long camel cashmere coat, precise seam work, modern drape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-5shtpurKnR2MFtgdm9eBoJEOeF47nzocNXU6jhH6pevyQdy4cxN5a7TdXUadn7BsDRNJRXdYLp9BHqhwVVg5O51QsNY0nupUIrbLRctvlfQw0luaeftywkcYaZqRiymO72J9952UKyl7Bpxln2z31IG4uw8KjfUAAJKxceLRUNXYX45cgYOh9e5eb-b3mcDeOrM6CarqXF6twil0II7JN3QIAnAHjePc20hS8SXTA192vTmjnV65"/>
+</div>
+</div>
+<!-- Floating Top-Right Actions -->
+<div class="absolute top-3 right-3 flex flex-col gap-2 z-10">
+<button aria-label="Add to Wishlist" class="w-10 h-10 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-on-surface flex items-center justify-center shadow-md active:scale-95 transition-all" id="wishlistBtn" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-[20px] transition-colors" id="wishlistIcon">favorite</span>
+</button>
+<button aria-label="Share Piece" class="w-10 h-10 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-on-surface flex items-center justify-center shadow-md active:scale-95 transition-all" onclick="shareItem()" type="button">
+<span class="material-symbols-outlined text-[19px]">ios_share</span>
+</button>
+</div>
+<!-- Floating Zoom Capability Pill & Carousel Counter -->
+<div class="absolute bottom-3 right-3 flex items-center gap-2 z-10">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md text-on-surface px-2.5 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">pinch</span>
+<span>Tap to inspect</span>
+</div>
+<div class="bg-inverse-surface/80 backdrop-blur-md text-inverse-on-surface px-2.5 py-1 rounded-full text-label-sm font-label-sm shadow-sm tracking-widest" id="slideIndicator">
+        1 / 5
+      </div>
+</div>
+</section>
+<!-- Product Core Overview -->
+<section class="px-margin-mobile pt-space-lg flex flex-col gap-space-sm bg-surface">
+<!-- Atelier / Season Sub-header -->
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Collection No. 04 — Outerwear</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+        Carbon Neutral
+      </span>
+</div>
+<!-- Title -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight">
+      Aura Double-Faced Cashmere Overcoat
+    </h1>
+<!-- Rating & Social Proof -->
+<div class="flex items-center gap-2 pt-0.5">
+<a class="flex items-center gap-1.5 focus:outline-none" href="#reviewsSection" onclick="openReviewsTab()">
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">4.9</span>
+<span class="font-body-sm text-body-sm text-secondary hover:text-primary underline decoration-outline-variant underline-offset-4">(248 reviews)</span>
+</a>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">96% fit true to size</span>
+</div>
+<!-- Pricing Row with Discount Badge -->
+<div class="flex items-baseline gap-space-sm pt-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">$420</span>
+<span class="font-body-md text-body-md text-secondary line-through">$520</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded uppercase tracking-wider">
+        20% OFF
+      </span>
+</div>
+<!-- Installment / Split Payment Micro-card -->
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex-1">
+        or 4 interest-free payments of <span class="font-label-lg text-label-lg text-on-surface font-semibold">$105</span> with <span class="font-semibold text-on-surface">Tabby</span> or <span class="font-semibold text-on-surface">Klarna</span>.
+      </p>
+</div>
+<!-- Scarcity / Low Stock Indicator -->
+<div class="flex items-center gap-2 py-1.5 px-3 rounded-lg bg-error-container text-on-error-container">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</span>
+<span class="font-label-md text-label-md font-semibold">
+        Low Stock: Only 3 left in your selected size
+      </span>
+</div>
+</section>
+<!-- Interactive Variant Pickers -->
+<section class="px-margin-mobile pt-space-lg flex flex-col gap-space-lg">
+<!-- Color Swatches -->
+<div class="flex flex-col gap-2.5">
+<div class="flex justify-between items-center">
+<span class="font-label-lg text-label-lg text-on-surface">
+          Color: <span class="font-semibold text-primary" id="selectedColorName">Warm Camel</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">3 Palette Tones</span>
+</div>
+<div class="flex items-center gap-3">
+<!-- Warm Camel (Active) -->
+<button aria-label="Select Warm Camel" class="color-swatch-btn group relative p-0.5 rounded-full ring-2 ring-primary bg-surface transition-all focus:outline-none" onclick="selectColor('Warm Camel', this)" type="button">
+<span class="block w-9 h-9 rounded-full shadow-inner" style="background-color: #C88A58;"></span>
+<span class="sr-only">Warm Camel</span>
+</button>
+<!-- Espresso Black -->
+<button aria-label="Select Espresso Black" class="color-swatch-btn group relative p-0.5 rounded-full ring-1 ring-transparent hover:ring-outline-variant bg-surface transition-all focus:outline-none" onclick="selectColor('Espresso Black', this)" type="button">
+<span class="block w-9 h-9 rounded-full shadow-inner" style="background-color: #211E1D;"></span>
+<span class="sr-only">Espresso Black</span>
+</button>
+<!-- Oatmeal Melange -->
+<button aria-label="Select Oatmeal Melange" class="color-swatch-btn group relative p-0.5 rounded-full ring-1 ring-transparent hover:ring-outline-variant bg-surface transition-all focus:outline-none" onclick="selectColor('Oatmeal Melange', this)" type="button">
+<span class="block w-9 h-9 rounded-full shadow-inner" style="background-color: #D9D2C7;"></span>
+<span class="sr-only">Oatmeal Melange</span>
+</button>
+</div>
+</div>
+<!-- Size Picker -->
+<div class="flex flex-col gap-2.5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Size:</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface" id="selectedSizeLabel">M (Medium)</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary flex items-center gap-1 underline underline-offset-4 decoration-primary-fixed focus:outline-none" onclick="toggleModal('sizeGuideModal')" type="button">
+<span class="material-symbols-outlined text-[15px]">straighten</span>
+          Size Guide &amp; Fit Predictor
+        </button>
+</div>
+<!-- Size Pills Matrix -->
+<div class="grid grid-cols-5 gap-2">
+<button class="size-pill-btn h-12 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center active:scale-95 transition-all focus:outline-none" onclick="selectSize('XS', this)" type="button">
+          XS
+        </button>
+<button class="size-pill-btn h-12 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center active:scale-95 transition-all focus:outline-none" onclick="selectSize('S', this)" type="button">
+          S
+        </button>
+<!-- Pre-selected M -->
+<button class="size-pill-btn h-12 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center shadow-sm active:scale-95 transition-all focus:outline-none" onclick="selectSize('M', this)" type="button">
+          M
+        </button>
+<button class="size-pill-btn h-12 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center active:scale-95 transition-all focus:outline-none" onclick="selectSize('L', this)" type="button">
+          L
+        </button>
+<!-- XL with subtle Low Stock hint -->
+<button class="size-pill-btn relative h-12 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-center active:scale-95 transition-all focus:outline-none" onclick="selectSize('XL', this)" type="button">
+          XL
+          <span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-primary"></span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary pt-0.5">
+        Tailored tailored modern relaxed silhouette. Model is 5'10" (178cm) wearing size S.
+      </p>
+</div>
+</section>
+<!-- Trust & Service Guarantee Matrix -->
+<section class="px-margin-mobile pt-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-3">
+<!-- Item 1 -->
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Free Express Delivery</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Estimated arrival by Thursday with discreet packaging</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">published_with_changes</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Complimentary 30-Day Returns</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Doorstep collection or instant boutique exchange</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Certified Italian Wool &amp; Cashmere</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Traceable supply chain from nomadic alpine pastures</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Expandable Info Accordions -->
+<section class="px-margin-mobile pt-space-lg flex flex-col gap-2">
+<!-- Accordion 1: Description & Designer's Notes (Expanded) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-md py-4 flex items-center justify-between text-left focus:outline-none" onclick="toggleAccordion('acc-desc', 'icon-desc')" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface">Description &amp; Designer Notes</span>
+<span class="material-symbols-outlined text-secondary text-[22px] transition-transform duration-200 rotate-180" id="icon-desc">expand_more</span>
+</button>
+<div class="px-space-md pb- space-md text-on-surface-variant flex flex-col gap-3 font-body-md text-body-md" id="acc-desc">
+<p>
+          Conceived as the foundational cornerstone of seasonal transitional dressing, the Aura Overcoat marries minimalist Scandinavian austerity with historical Italian sartorial savoir-faire. Handcrafted from two unlined layers of pure high-grade Mongolian cashmere, meticulously joined along the inner perimeter using hidden blind-stitching.
+        </p>
+<p>
+          The silhouette cuts a fluid, non-restrictive profile designed to layer effortlessly over chunky winter knits and structured evening tailoring alike. Finished with hand-carved horn buttons and horn-trimmed storm welt pockets.
+        </p>
+<div class="p-3 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">stylus_note</span>
+<span>Atelier Fitting Notes</span>
+</div>
+<span>Designed for a relaxed, statuesque drape. If you prefer a crisp, shoulder-hugging traditional fit, order one size down.</span>
+</div>
+</div>
+</div>
+<!-- Accordion 2: Materials & Care -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-md py-4 flex items-center justify-between text-left focus:outline-none" onclick="toggleAccordion('acc-care', 'icon-care')" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface">Materials &amp; Care</span>
+<span class="material-symbols-outlined text-secondary text-[22px] transition-transform duration-200" id="icon-care">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md text-on-surface-variant flex flex-col gap-3 font-body-md text-body-md" id="acc-care">
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">fiber_manual_record</span>
+<span><strong>Composition:</strong> 100% Mongolian Cashmere (Grade-A, 14.5 micron yarn thickness).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">fiber_manual_record</span>
+<span><strong>Trims:</strong> Sustainable ethically sourced water buffalo horn buttons.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">fiber_manual_record</span>
+<span><strong>Care Protocol:</strong> Specialty dry clean only. Do not tumble dry. Use a cashmere comb periodically to maintain surface luster.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">fiber_manual_record</span>
+<span><strong>Storage:</strong> Store on padded cedarwood hanger inside provided organic cotton garment bag.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Accordion 3: Shipping & Seamless Returns -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-md py-4 flex items-center justify-between text-left focus:outline-none" onclick="toggleAccordion('acc-shipping', 'icon-shipping')" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface">Shipping &amp; Returns</span>
+<span class="material-symbols-outlined text-secondary text-[22px] transition-transform duration-200" id="icon-shipping">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md text-on-surface-variant flex flex-col gap-2.5 font-body-sm text-body-sm" id="acc-shipping">
+<p>
+          Orders placed before 2:00 PM CET are prepared and dispatched same-day via DHL Climate-Compensated Express. Every piece arrives within our reusable archival cotton garment preservation sleeve.
+        </p>
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex justify-between text-on-surface">
+<span>Domestic Express Shipping</span>
+<span class="font-semibold text-tertiary">Complimentary (1–2 business days)</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span>International Priority</span>
+<span class="font-semibold">$25 (Free over $600)</span>
+</div>
+</div>
+<p class="pt-1 text-secondary">
+          Returns are accepted within 30 days of physical delivery date. Prepaid digital return tags are instantly accessible in your account dashboard.
+        </p>
+</div>
+</div>
+<!-- Accordion 4: Customer Reviews Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" id="reviewsSection">
+<button class="w-full px-space-md py-4 flex items-center justify-between text-left focus:outline-none" onclick="toggleAccordion('acc-reviews', 'icon-reviews')" type="button">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Verified Reviews</span>
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full">248</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px] transition-transform duration-200" id="icon-reviews">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md flex flex-col gap-space-md" id="acc-reviews">
+<!-- Review Metrics Summary -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface leading-none">4.9</span>
+<div class="flex items-center text-primary-container pt-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary pt-0.5">Based on 248 verified owners</span>
+</div>
+<div class="w-1/2 flex flex-col gap-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span>5★</span>
+<div class="flex-1 h-1.5 rounded-full bg-surface-variant overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 92%;"></div>
+</div>
+<span class="text-secondary w-6 text-right">92%</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span>4★</span>
+<div class="flex-1 h-1.5 rounded-full bg-surface-variant overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 7%;"></div>
+</div>
+<span class="text-secondary w-6 text-right">7%</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span>3★</span>
+<div class="flex-1 h-1.5 rounded-full bg-surface-variant overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 1%;"></div>
+</div>
+<span class="text-secondary w-6 text-right">1%</span>
+</div>
+</div>
+</div>
+<!-- Review Card 1 -->
+<div class="p-3.5 rounded-lg bg-surface flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Camilla V.</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">Verified Buyer</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">3 days ago</span>
+</div>
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            "The hand-feel of this cashmere rivaled couture coats costing four times as much. The weight is substantial yet light as a whisper on the shoulders. Wore it across London fashion week and received non-stop compliments."
+          </p>
+<span class="font-label-sm text-label-sm text-secondary">Purchased: Warm Camel / Size M</span>
+</div>
+<!-- Review Card 2 -->
+<div class="p-3.5 rounded-lg bg-surface flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Elena S.</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">Verified Buyer</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">1 week ago</span>
+</div>
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            "True architectural simplicity. The double-faced craftsmanship means no bulky lining to bunch up sweaters underneath. An heirloom piece for sure."
+          </p>
+<span class="font-label-sm text-label-sm text-secondary">Purchased: Espresso Black / Size S</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Cross-Selling Section: Frequently Styled Together -->
+<section class="px-margin-mobile pt-space-xl">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Frequently Styled Together</h2>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Capsule Curation</span>
+</div>
+<!-- Bundle Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Paired Items Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Item 1: Silk Scarf -->
+<div class="flex flex-col gap-1.5">
+<div class="aspect-[3/4] w-full rounded-lg bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Still life photograph of a rolled raw mulberry silk twill scarf in terracotta and charcoal geometric monogram print, styled softly on off-white plaster plinth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQdHKINJyee7S9MX-YqMaYlwPbCXRtg6l7ry2ve2SbbeIPyWA1T5GYOnB0k4dcAtYSA7Xc1Koa-IxD35D9K7gafe2XcEJFoQiW4fV31d_1rwlztaNu7YvknO6LcNKSV4_ciODG8_NfN-KOAcFv4CBZdsVp9ufE24Za0-EttnuVgoK3uogjVV1-AdvBLeLPr2tQkt_aLC1SjfuNAf6H_4PPWD6yqbkudRhOYMMOWDuYYiv3f9yQ--Oq"/>
+<div class="absolute top-2 left-2 bg-inverse-surface/85 text-inverse-on-surface text-[10px] font-label-sm px-2 py-0.5 rounded">
+                Silk Twill
+              </div>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-medium truncate pt-1">Venice Printed Silk Scarf</span>
+<span class="font-body-sm text-body-sm text-secondary">$85</span>
+</div>
+<!-- Item 2: Leather Boots -->
+<div class="flex flex-col gap-1.5">
+<div class="aspect-[3/4] w-full rounded-lg bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Studio catalog shot of luxury square-toe polished dark espresso calfskin leather ankle boots with sculpted architectural block heel against clean ivory ground." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK8t-1PXycb6RnySffMRaj4pXYplfivLos-OlSrswDUQsnFQBqPzsGU35LUFPs458lMrDpd4c71epEgl1MMSUs7bS3pYfutZL3n98k3j8Rx9UWBA9KHWqow6eJkb1gZjxCc9rVOtPmJHzn5XYDgYypAqUgQumy_9dN1D5fCxKjjN_ZSgZLRpDIUQWMjvS4jwv57kCKUkb5MNUYsCq7aGaLJZMLKumqU_c8L16-UNEK-oirdP8lhyYu"/>
+<div class="absolute top-2 left-2 bg-inverse-surface/85 text-inverse-on-surface text-[10px] font-label-sm px-2 py-0.5 rounded">
+                Handcrafted
+              </div>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-medium truncate pt-1">Palazzo Calfskin Boot</span>
+<span class="font-body-sm text-body-sm text-secondary">$320</span>
+</div>
+</div>
+<!-- Bundle Discount Checkbox Action Bar -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between gap-3">
+<label class="flex items-center gap-3 cursor-pointer select-none">
+<input checked="" class="w-5 h-5 accent-primary rounded cursor-pointer" id="bundleCheckbox" onchange="toggleBundle(this)" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Bundle &amp; Save 15%</span>
+<span class="font-body-sm text-body-sm text-secondary">Coat + Scarf + Boot Trio</span>
+</div>
+</label>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm text-primary font-bold" id="bundlePrice">$701</div>
+<div class="font-body-sm text-body-sm text-secondary line-through">$825</div>
+</div>
+</div>
+<button class="w-full h-12 bg-secondary-container text-on-secondary-container hover:bg-surface-variant font-label-lg text-label-lg font-bold rounded-lg flex items-center justify-center gap-2 active:scale-[0.99] transition-all" onclick="addBundleToBag()" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+          Add Complete Ensemble to Bag
+        </button>
+</div>
+</div>
+</section>
+<!-- Sticky Conversion Rail -->
+<aside class="fixed bottom-0 left-0 w-full z-40 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.06)] px-margin-mobile py-3 pb-safe">
+<div class="flex items-center justify-between gap-3 max-w-md mx-auto">
+<!-- Price & Selected Snapshot -->
+<div class="flex flex-col min-w-0 pr-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$420</span>
+<span class="font-body-sm text-body-sm text-secondary line-through">$520</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary truncate" id="railVariantText">Camel · M (Ready)</span>
+</div>
+<!-- Action Button Group -->
+<div class="flex items-center gap-2 flex-1 justify-end">
+<!-- Secondary CTA: Add to Bag -->
+<button aria-label="Add coat to bag" class="h-[48px] px-3.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-secondary-container active:scale-95 transition-all flex items-center justify-center font-label-lg text-label-lg font-semibold shrink-0" id="addBagBtn" onclick="addToBag(this)" type="button">
+<span class="material-symbols-outlined text-[20px]" id="addBagIcon">shopping_bag</span>
+</button>
+<!-- Primary CTA: 1-Tap Checkout -->
+<button class="h-[48px] flex-1 px-4 rounded-lg bg-primary text-on-primary active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-sm font-label-lg text-label-lg font-bold uppercase tracking-wider" onclick="buyNowInstant()" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+          Buy Now
+        </button>
+</div>
+</div>
+</aside>
+<!-- Size Guide & Fit Predictor Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-0 sm:p-4" id="sizeGuideModal">
+<div class="bg-surface-container-lowest w-full max-w-md rounded-t-2xl sm:rounded-xl shadow-2xl p-space-lg flex flex-col gap-4 animate-in fade-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">straighten</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Size &amp; Fit Predictor</h3>
+</div>
+<button aria-label="Close size guide" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:text-on-surface" onclick="toggleModal('sizeGuideModal')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Fit Recommendation Banner -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">recommend</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Our AI Fit Engine Recommends: Size M</span>
+<span class="font-body-sm text-body-sm text-secondary">Based on customer height 5'9" - 5'11" with winter layer allowances.</span>
+</div>
+</div>
+<!-- Size Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface font-label-sm text-label-sm uppercase">
+<th class="py-2 px-3 rounded-l">Size</th>
+<th class="py-2 px-3">Bust (in)</th>
+<th class="py-2 px-3">Length (in)</th>
+<th class="py-2 px-3 rounded-r">Shoulder</th>
+</tr>
+</thead>
+<tbody class="text-on-surface-variant">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">XS</td>
+<td class="py-2 px-3">37.0</td>
+<td class="py-2 px-3">45.2</td>
+<td class="py-2 px-3">15.5</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">S</td>
+<td class="py-2 px-3">39.0</td>
+<td class="py-2 px-3">46.0</td>
+<td class="py-2 px-3">16.0</td>
+</tr>
+<tr class="bg-primary-fixed/30 font-semibold text-on-surface">
+<td class="py-2 px-3 text-primary font-bold">M (You)</td>
+<td class="py-2 px-3">41.0</td>
+<td class="py-2 px-3">46.8</td>
+<td class="py-2 px-3">16.5</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3 font-semibold text-on-surface">L</td>
+<td class="py-2 px-3">43.5</td>
+<td class="py-2 px-3">47.4</td>
+<td class="py-2 px-3">17.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg font-bold" onclick="toggleModal('sizeGuideModal')" type="button">
+        Apply Recommended Size (M)
+      </button>
+</div>
+</div>
+<!-- Interactive Client Micro-Script -->
+<script>
+    // State storage
+    const pdpState = {
+      color: 'Warm Camel',
+      size: 'M',
+      wishlisted: false,
+      bundleActive: true
+    };
+
+    // Carousel counter tracker
+    const gallery = document.getElementById('pdpGallery');
+    const indicator = document.getElementById('slideIndicator');
+    if (gallery && indicator) {
+      gallery.addEventListener('scroll', () => {
+        const index = Math.round(gallery.scrollLeft / gallery.clientWidth) + 1;
+        indicator.textContent = `${index} / 5`;
+      });
+    }
+
+    // Swatch Selection
+    function selectColor(colorName, btn) {
+      pdpState.color = colorName;
+      document.getElementById('selectedColorName').textContent = colorName;
+      
+      // Update Swatch UI
+      document.querySelectorAll('.color-swatch-btn').forEach(el => {
+        el.classList.remove('ring-2', 'ring-primary');
+        el.classList.add('ring-1', 'ring-transparent');
+      });
+      btn.classList.add('ring-2', 'ring-primary');
+      btn.classList.remove('ring-1', 'ring-transparent');
+
+      updateRailText();
+    }
+
+    // Size Selection
+    function selectSize(sizeCode, btn) {
+      pdpState.size = sizeCode;
+      const sizeNames = { 'XS': 'XS (Extra Small)', 'S': 'S (Small)', 'M': 'M (Medium)', 'L': 'L (Large)', 'XL': 'XL (Extra Large)' };
+      document.getElementById('selectedSizeLabel').textContent = sizeNames[sizeCode] || sizeCode;
+
+      // Update Pill UI
+      document.querySelectorAll('.size-pill-btn').forEach(el => {
+        el.classList.remove('bg-inverse-surface', 'text-inverse-on-surface', 'font-bold');
+        el.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container', 'text-on-surface');
+      btn.classList.add('bg-inverse-surface', 'text-inverse-on-surface', 'font-bold');
+
+      updateRailText();
+    }
+
+    function updateRailText() {
+      const shortColor = pdpState.color.split(' ')[0];
+      document.getElementById('railVariantText').textContent = `${shortColor} · ${pdpState.size} (Ready)`;
+    }
+
+    // Wishlist Toggle
+    function toggleWishlist(btn) {
+      pdpState.wishlisted = !pdpState.wishlisted;
+      const icon = document.getElementById('wishlistIcon');
+      if (pdpState.wishlisted) {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        icon.classList.add('text-primary');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        icon.classList.remove('text-primary');
+      }
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(contentId, iconId) {
+      const content = document.getElementById(contentId);
+      const icon = document.getElementById(iconId);
+      if (content && icon) {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        } else {
+          content.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+        }
+      }
+    }
+
+    function openReviewsTab() {
+      const content = document.getElementById('acc-reviews');
+      const icon = document.getElementById('icon-reviews');
+      if (content && icon) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Bundle Toggle
+    function toggleBundle(checkbox) {
+      pdpState.bundleActive = checkbox.checked;
+      const priceEl = document.getElementById('bundlePrice');
+      if (checkbox.checked) {
+        priceEl.textContent = '$701';
+      } else {
+        priceEl.textContent = '$420';
+      }
+    }
+
+    function addBundleToBag() {
+      const addBagBtn = document.getElementById('addBagBtn');
+      const icon = document.getElementById('addBagIcon');
+      if (icon) {
+        icon.textContent = 'check';
+        setTimeout(() => { icon.textContent = 'shopping_bag'; }, 1800);
+      }
+    }
+
+    // Modal Control
+    function toggleModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.toggle('hidden');
+      }
+    }
+
+    // Add To Bag micro-action
+    function addToBag(btn) {
+      const icon = document.getElementById('addBagIcon');
+      if (icon) {
+        icon.textContent = 'done';
+        btn.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+        setTimeout(() => {
+          icon.textContent = 'shopping_bag';
+          btn.classList.remove('bg-primary-fixed', 'text-on-primary-fixed');
+        }, 1600);
+      }
+    }
+
+    function buyNowInstant() {
+      const originalText = document.getElementById('railVariantText').textContent;
+      document.getElementById('railVariantText').textContent = 'Opening Secure Checkout...';
+      setTimeout(() => {
+        document.getElementById('railVariantText').textContent = originalText;
+      }, 1500);
+    }
+
+    function shareItem() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Aura Double-Faced Cashmere Overcoat',
+          text: 'Discovered this luxury Mongolian cashmere coat on LUMEN Lifestyle.',
+          url: window.location.href,
+        }).catch(() => {});
+      }
+    }
+  </script>
+</div></main></body></html>

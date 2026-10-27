@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#a04100", "primary": "#9c3f00", "tertiary": "#38654d", "inverse-surface": "#303036", "on-secondary-fixed": "#1c1b1b", "on-primary-container": "#fffbff", "on-tertiary-fixed": "#002112", "on-background": "#1b1b21", "on-primary-fixed-variant": "#7a3000", "secondary-container": "#e5e2e1", "tertiary-fixed-dim": "#a1d1b4", "on-surface": "#1b1b21", "error-container": "#ffdad6", "tertiary-fixed": "#bceecf", "on-secondary-fixed-variant": "#474646", "tertiary-container": "#507e65", "primary-fixed-dim": "#ffb693", "error": "#ba1a1a", "on-surface-variant": "#574239", "surface": "#fbf8ff", "surface-container-low": "#f5f2fb", "inverse-primary": "#ffb693", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#224f39", "on-error-container": "#93000a", "secondary-fixed": "#e5e2e1", "on-secondary-container": "#656464", "secondary": "#5f5e5e", "background": "#fbf8ff", "on-error": "#ffffff", "on-primary-fixed": "#341000", "on-secondary": "#ffffff", "surface-variant": "#e4e1ea", "surface-container": "#efecf5", "on-tertiary-container": "#f6fff6", "surface-container-high": "#eae7ef", "outline-variant": "#dec0b4", "surface-bright": "#fbf8ff", "surface-container-lowest": "#ffffff", "surface-dim": "#dbd9e1", "secondary-fixed-dim": "#c8c6c5", "inverse-on-surface": "#f2eff8", "on-primary": "#ffffff", "surface-container-highest": "#e4e1ea", "primary-fixed": "#ffdbcb", "primary-container": "#c05410", "outline": "#8b7267" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "gutter": "1rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "title-editorial": ["Bodoni Moda"], "headline-lg": ["Bodoni Moda"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "display-hero": ["Bodoni Moda"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Bodoni Moda"], "display-hero-mobile": ["Bodoni Moda"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "title-editorial": ["16px", { "lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-hero": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface antialiased min-h-full flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="bg-on-surface text-surface-container-lowest px-margin-mobile py-space-xs flex items-center justify-between font-label-sm text-label-sm tracking-widest uppercase"><span class="truncate font-label-sm text-label-sm">Free Worldwide Express Shipping over $150 | LUMEN10</span><button aria-label="Currency and Region selector" class="flex items-center gap-space-xs pl-space-sm shrink-0 hover:text-primary-fixed transition-colors" type="button"><span class="font-label-sm text-label-sm">USD $</span><span class="material-symbols-outlined text-[14px]">expand_more</span></button></div><div class="h-20 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="LUMEN Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface truncate">LUMEN</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Home</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Wishlist" class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-none">2</span></button><button aria-label="Shopping Cart" class="relative w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-none">3</span></button><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pbn7AtDgkfq3byt9VdCD9s0doNwbzM5XNCN9gXYUhG_3eIsL8Lt_dy3Ejn0VLfPl2_TM3lQBsCh2R815PPGU7YgteSmramRL6Bkrf7V9CTQOEujdLKqZ9-MDBayu4iuedMbZcpYjphgrtP7icqAAnmKsvUxThNVNlJB1Mn090DZ7FG6jW3m5s8o1WSKrfV3n6GrernEQZN2p1bBtPZRyFdfiizIjlsDcugsmXHOV_rmO5vhlAb0J"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-24 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Sticky Modern Search Bar & Quick Trigger -->
+<div class="sticky top-20 z-40 px-margin-mobile py-space-sm bg-surface/90 backdrop-blur-md">
+<div class="flex items-center gap-space-xs bg-surface-container-low rounded-xl px-space-md py-space-xs shadow-sm">
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0">search</span>
+<input class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/70 font-body-sm text-body-sm focus:outline-none min-w-0" id="search-input" placeholder="Search linen blazers, ceramics, fine scents..." type="text"/>
+<button aria-label="Filters" class="w-10 h-10 flex items-center justify-center shrink-0 rounded-lg bg-surface-container text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Editorial Hero Section -->
+<section class="px-margin-mobile pt-space-xs">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-sm flex flex-col justify-end min-h-[440px] bg-inverse-surface">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="High fashion luxury editorial portrait of an elegant and serene model draped in a flowing terracotta and beige wool cashmere trenchcoat, warm architectural concrete studio setting, golden hour soft directional sunlight, minimal and refined aesthetic with subtle earth tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD784-TbdfgpfG2VZo9zqvVnhErmSW82IBBv63pHA2uiaiVRSEpkJY_T01VSdQvSo33xw_T-g7YINaSs2_xtTNZ9FqYfTIIljTEH-ylfxyPdZI2wmnWkfRvQi5KBJIgT9Zq8afqZaJsgA7jlU5mMT5mGPgI9PigWPA8ltjxmVuA0VUdsHS2HxNDznYrk5v-bGLbcTSCdDeIIsYV4emSN8RCQTbZ3wtGN93kSqRO1xZZHy5FHRMHPfst')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent"></div>
+<div class="relative z-10 p-space-lg flex flex-col gap-space-xs text-inverse-on-surface">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface uppercase tracking-widest">Autumn / Winter 2025</span>
+</div>
+<h1 class="font-display-hero-mobile text-display-hero-mobile text-inverse-on-surface tracking-tight mt-1">The Autumn Resonance</h1>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80 max-w-[280px] leading-relaxed">Sculptural silhouettes and tactile grounding designed for intentional living.</p>
+<div class="flex items-center gap-space-sm mt-space-md">
+<button class="flex-1 py-3 px-space-md rounded-xl bg-primary text-on-primary font-label-md text-label-md tracking-wider uppercase text-center shadow-md active:scale-95 transition-transform flex items-center justify-center gap-1.5" type="button">
+<span>Shop Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="py-3 px-space-md rounded-xl bg-surface-container-lowest/20 backdrop-blur-md text-inverse-on-surface font-label-md text-label-md tracking-wider uppercase active:scale-95 transition-transform" type="button">
+            Lookbook
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Categories (Horizontal Squircle Scroll) -->
+<section class="mt-space-lg">
+<div class="flex items-center justify-between px-margin-mobile mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block">Curated Spheres</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Explore Categories</h2>
+</div>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+<span>All</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<div class="flex gap-space-sm overflow-x-auto px-margin-mobile pb-space-xs no-scrollbar">
+<!-- Category 1 -->
+<a class="flex flex-col items-center gap-space-xs shrink-0 w-20 group" href="#">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-surface-container shadow-sm relative group-active:scale-95 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Close up editorial shot of neutral draped tailored linen garments hanging on an oak rack, clean beige background, soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9I2XqGv57_ONVrl3xlOJ6Rl7jB0icQBqhfNFlboudkLQKCtzH3S2sGkXTUp9TWqZ6VMqxtaZ-0zAUf3kpm4lUXEWmnEWsr78dC_gkIl0GRjW4MuIu4HRvQL5qQ9b7Md2Qj2yjQs4sbZbK1_YaDmAayjPvjX2LlHu5cr-zfjegp7U82OKkSnaYzpsnxn9u0g8vAb1bMBd6uvTW6xGETFA0-kmg9HO8csaCG5lhCMvnPwo5atx-gwaz"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center truncate w-full">Apparel</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant -mt-1">142 items</span>
+</a>
+<!-- Category 2 -->
+<a class="flex flex-col items-center gap-space-xs shrink-0 w-20 group" href="#">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-surface-container shadow-sm relative group-active:scale-95 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Handcrafted minimalist textured clay ceramic bowl and sculptural vase placed on a travertine pedestal, soft natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSjoleYdWBjBMLBeTuOVIZgRD6ABYNLRlIqTjoHyZiXsEvTMJe2g_mf2tKUeOOVorXyE_u_DRlAGoVBZ5nQySAUynx2XukFC39Pw_7aC9yQ5vsCa68R7OeOO4Gm3xoEnjtRubtwm9fBvHODdL-sdzYVqdu-sYtjsm8iEBhLCgKpGVGFZ2jVvPLFytFEMcCf0TYyaJekybrYpcfhsMku3d-8SpPRAHxHNGW8E13xKitlwYSGcXtt9Il"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center truncate w-full">Objects</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant -mt-1">68 items</span>
+</a>
+<!-- Category 3 -->
+<a class="flex flex-col items-center gap-space-xs shrink-0 w-20 group" href="#">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-surface-container shadow-sm relative group-active:scale-95 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Minimalist luxury amber glass perfume bottle with dark wooden cap resting on raw grey stone, sunlight casting warm reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ9I5D7cnzsvqx6_ujOluA4fW9-sw-a6a5l3AjGr46_GwRdtt3TaFpmsJ3v38u_wsPiyypfy2I_1WdA9PweQesN44lkbOGu0FGUmbH1UqHGlTzFoHYQa59COVeETLo_YbfE8S2Y67M2LIF9Wv_x_GEFa5qf9shSsb8ArgDZxGbQ9khk0q6_36IpxQP8D8rch451C7UPmOmfBwg07rsCHxcOesp5-7Sd7GYPUz38MGATxAS0ADKgnr_"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center truncate w-full">Fine Scents</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant -mt-1">34 items</span>
+</a>
+<!-- Category 4 -->
+<a class="flex flex-col items-center gap-space-xs shrink-0 w-20 group" href="#">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-surface-container shadow-sm relative group-active:scale-95 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Artisanal deep saddle brown vegetable-tanned leather structured handbag with solid brass hardware on cream cloth background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaQ2uy5KlxIWaQzxK_QauVT4IlAhmZXCniAZ_6S5Ovpbgvk6dqgEUfW23J44D-5yFYNXEQ6M3E5mIqmHVe71Tm6UBGRmSTbd_lkJJJCnkqMgJvYidNqEisjCq99ScQvJtFGWTX_KxsEvOOzw-aueGLke3r6sF6V90XS9PmejP_kSbIqTj9wMcFdSQSoKyJbrVRtwRs13SoWBXRjtBGZJJH4oZZXkGua04yg6y8ni3WexAhGJPIxrPG"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center truncate w-full">Leather</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant -mt-1">51 items</span>
+</a>
+<!-- Category 5 -->
+<a class="flex flex-col items-center gap-space-xs shrink-0 w-20 group" href="#">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-surface-container shadow-sm relative group-active:scale-95 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Modern architectural leather mules with sculpted wooden kitten heel on warm sandstone background, warm luxury look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6MjC7b2FWS8EclMzRd_LtyNZPFP6YI4huoG7Hdcf86F7ckcCbrY27yHOJURHL-AqcRGQN6EmKMWNmleGIedre7i_mVnrZEsnyS8Absizg0uSbB3RqT4i-g3_-714Q5mNZz7hwm6q2MtQIS6jCQmoFFEUnsM_Va-aSbFAtZMDzBXVelcxm_1_KC8zPWX08BxKM4U3lx1yNk0sYAh947Ak3nw0DlNI3r8bKD8Xp-RfRTWCKqDo0L5Du"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center truncate w-full">Footwear</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant -mt-1">42 items</span>
+</a>
+</div>
+</section>
+<!-- Best Sellers Carousel -->
+<section class="mt-space-lg">
+<div class="flex items-center justify-between px-margin-mobile mb-space-sm">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">local_fire_department</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Client Favorites</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Best Sellers</h2>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Scroll Carousel Left" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90 transition-transform" onclick="document.getElementById('bestseller-carousel').scrollBy({left: -240, behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[16px]">west</span>
+</button>
+<button aria-label="Scroll Carousel Right" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface active:scale-90 transition-transform" onclick="document.getElementById('bestseller-carousel').scrollBy({left: 240, behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[16px]">east</span>
+</button>
+</div>
+</div>
+<!-- Product Slider -->
+<div class="flex gap-space-md overflow-x-auto px-margin-mobile pb-space-sm snap-x snap-mandatory no-scrollbar" id="bestseller-carousel">
+<!-- Product 1 -->
+<div class="snap-start shrink-0 w-[240px] flex flex-col bg-surface-container-lowest rounded-2xl p-space-xs shadow-sm">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Model wearing double-breasted aura wool cashmere long coat in warm camel tone, studio background with soft warm shadows, elegant editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB_y3nQLIf_Zc_LmOeMF2lJvuFjRLFuEVCrQkDLjFJOzN80Il-f0PLz2_pwvNDRNgA5X5QG-jkeBOVG7qHc1DSnhv1hnOT-Wj1lcv2J6VHif8jAGKXEYW2ndh6NhS5F1QIKUrq0JKYPywfj2IPv7SHpnIyH4WHjrWSdjZTxTpY4tcrddFEwSZb6f9UVoqCKAXMXnI4EjIo7tb2ftykg7nhFpeEVNqQStFXqMwcWQvB1EutXbCaYAeP"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-sm font-label-sm text-[10px] text-on-surface tracking-wider uppercase">Iconic</span>
+<button aria-label="Wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').classList.toggle('fill-1');" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.9</span>
+<span>(184)</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mt-0.5 line-clamp-1">Aura Wool Cashmere Overcoat</h3>
+<span class="font-label-sm text-[11px] text-tertiary">100% Recycled Cashmere</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant line-through">$440</span>
+<span class="font-label-lg text-label-lg text-primary">$380</span>
+</div>
+<button aria-label="Add to Bag" class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="triggerToast('Added Aura Overcoat to Bag')" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="snap-start shrink-0 w-[240px] flex flex-col bg-surface-container-lowest rounded-2xl p-space-xs shadow-sm">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Warm modern interior showing a minimalist matte ceramic reed diffuser with wooden reeds on a travertine ledge, delicate steam and serene morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDXeuwkNfEAQMBirmr4gucsVgUUdndq7pdlRxGzsr-YorLjXXAOF6B1Obx-pI5HQPDbEHMnlXduYRoGcSO1mT2qOdFX5w8WppfoqfSh9scv3O3ScOmiVkw1zC7KneqPtyl84P3_MwdaNvVjMJn0AaFqqmMlEuFxlESO6YPPiCC_nt5UHOfVY9O4NcpgRpQPJlVwTR4-ghdjE4EfOmBuy56csvHqT9mc4RsgZ9I8qRHTL5gLFFzOrO5"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-[10px] tracking-wider uppercase">Artisan</span>
+<button aria-label="Wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').classList.toggle('fill-1');" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">5.0</span>
+<span>(92)</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mt-0.5 line-clamp-1">Santal Minimalist Diffuser</h3>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Cardamom &amp; Cedarwood</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">$75</span>
+</div>
+<button aria-label="Add to Bag" class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="triggerToast('Added Santal Diffuser to Bag')" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="snap-start shrink-0 w-[240px] flex flex-col bg-surface-container-lowest rounded-2xl p-space-xs shadow-sm">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Sculptural asymmetrical raw ceramic vase with rough sand texture containing dried oat sprigs, warm sunlight gradient, artisanal luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3509_Ft5b-vavDtH0dBohDvB5FaNCOCHQ6qUKB1I50FlN9ijwcWl1eGklUlYXc7ZlitnnDWaM6fatRnP5z3wjsDbeJJT8fCCkFKW781vEqmDDPsrSeHSyMqS5Nj-dR0B2ep2z-emGMOPLCVLeNgMp5VFtfM8UqUKkSBfCtb4Vvf5efL9ltQGFMVcOyHL6E9bEH7M2E25_8FYtj2F4VmViBQj9r_U06JZD_67unK_OMHkWB3F85a1b"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] tracking-wider uppercase">Limited</span>
+<button aria-label="Wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').classList.toggle('fill-1');" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1 flex-1 justify-between">
+<div>
+<div class="flex items-center gap-1 text-[11px] font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.8</span>
+<span>(67)</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mt-0.5 line-clamp-1">Terra Formed Ceramic Vase</h3>
+<span class="font-label-sm text-[11px] text-tertiary">Wheel Hand-Thrown</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">$110</span>
+</div>
+<button aria-label="Add to Bag" class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-90 transition-transform" onclick="triggerToast('Added Ceramic Vase to Bag')" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Members Split Promo Banner -->
+<section class="px-margin-mobile mt-space-lg">
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-high p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] tracking-widest uppercase">Members Pass</span>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest shadow-sm font-label-sm text-[11px] text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="tracking-wider font-semibold" id="promo-timer">14:28:49</span>
+</div>
+</div>
+<div class="mt-space-md">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight leading-snug">Private Access:<br/>20% Off Sustainable Series</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Apply pass LUMENEARTH at checkout. Conscious raw materials, ethically verified ateliers.</p>
+</div>
+<div class="mt-space-md flex items-center gap-space-sm">
+<button class="py-2.5 px-space-md rounded-xl bg-inverse-surface text-inverse-on-surface font-label-md text-label-md uppercase tracking-wider active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Claim Privilege</span>
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+</button>
+<button class="py-2.5 px-space-sm rounded-xl bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1 active:scale-95 transition-transform" onclick="navigator.clipboard?.writeText('LUMENEARTH'); triggerToast('Copied code LUMENEARTH');" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+</section>
+<!-- New Arrivals Curated 2-Column Grid -->
+<section class="px-margin-mobile mt-space-xl">
+<div class="flex items-end justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block">Autumn Capsule</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">New Arrivals</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 4 of 32</span>
+</div>
+<div class="grid grid-cols-2 gap-gutter-mobile">
+<!-- Card 1 -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-xs shadow-sm group">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Model styled in a ribbed taupe structured knit polo sweater with Mother-of-pearl buttons, clean minimal studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJW9Qgj3LGtNObeleKqEsZK0jbiSMQIWmScFGYfboXzfm3R33exltt53GRMoW5JXGYx2Gujv2U_HxLvIrGuAcwiIpRtyI9a1oiAdjGXJCZzRlU2nF3Ywy4GdMRj5rLE5Xs3lfkNjc5snvNRD3ol2QJXDkyxLv1Zd4-r8BqRwg4l-a3W7BbbOx2M4nEMUC5WCJUx4nQPyssrejB3yAgf7oTW6Jjh13DRanZalI4U3RxmHoFwUOKaJoq"/>
+<button aria-label="Wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').classList.toggle('fill-1');" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-xs pt-space-sm flex flex-col justify-between flex-1">
+<div>
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-on-surface-variant">Knitwear</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface truncate">Ribbed Meridian Polo</h3>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">$165</span>
+<button aria-label="Quick Add" class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface active:bg-primary active:text-on-primary transition-colors" onclick="triggerToast('Added Meridian Polo to Bag')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-xs shadow-sm group">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury handcrafted dark olive calfskin slip-on loafers arranged against warm travertine stone and dramatic architectural shadow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW_lQngaMDoQN01ntRuj3Gq3-oK6KoqOyOIDWPfP20hYBUw5cApCWERpG7F_w0hJgqtFNAmT7Yv9ooBMED-Zp9Tz1c6Gn68MiG5Vx0uEGMlfwhV_DRHfJn1LHtxnJKx7Y4cG1rm2fe7IA8ycxeenk00JIKtBW_Z_L-UXB9u16nA6KkWCbd4rh1dbnrZnw4HFtzbd6EfyK8nCzuf_ggOKdaMjDLb9vvLfusLmd4chf27Seu-IewDHIz"/>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-[9px] uppercase tracking-wider text-on-surface">New</span>
+<button aria-label="Wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').classList.toggle('fill-1');" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-xs pt-space-sm flex flex-col justify-between flex-1">
+<div>
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-on-surface-variant">Footwear</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface truncate">Palermo Glove Loafer</h3>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">$290</span>
+<button aria-label="Quick Add" class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface active:bg-primary active:text-on-primary transition-colors" onclick="triggerToast('Added Palermo Loafer to Bag')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-xs shadow-sm group">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Brushed solid bronze sculptural jewelry tray on a minimalist dark walnut vanity table with delicate reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWhgkNwCFWl5Ko3a8w38NFDVXAIRFgmYAKVJk97X9JnhiaeTgoEKAvxuLHO_IpTFGszRE1uEzuTbVcfwcERJjdaz8LCEdQFv4lwRD03NlNGTUD5oG7iPrwrLjJcZLcpnktlwwb5zf6rl8AB2t-KRdH7vKP9nUI2OpudZgTlBU6MNmqbMAwNTYoD-NKMFv2OSw2no32k-5mGSIQkJpEu6-LmIeOsCbSHUlp7o_hRS_K375MJqy8zg25"/>
+<button aria-label="Wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').classList.toggle('fill-1');" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-xs pt-space-sm flex flex-col justify-between flex-1">
+<div>
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-on-surface-variant">Decor</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface truncate">Solstice Bronze Valet</h3>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">$95</span>
+<button aria-label="Quick Add" class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface active:bg-primary active:text-on-primary transition-colors" onclick="triggerToast('Added Solstice Valet to Bag')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-xs shadow-sm group">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sleek glass botanical essence flask with delicate brass dropper cap on fine sandy soil, golden backlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNbPpMlb_8q2weN24Gk_quYfRBEBr4-oIbZQ-vtovMqh4rL-bICxn-rpu8weirWjVwIf8rHcQNDKeryhHDVprMQeFe-kYBmEbIoblVPmOwjmBMoVphb6R_4_sgOwNLxIFOWrw1iGrYtXvbDUsbWfnRymDVoH2oZYvBVbFDe0hO2o2knkGbC4PwE9aGLlTVpiQ31Hyy5QEjhFC7hC2lOgOYZ50ko4Gf6KX3jufCeNJqq4zy6b0m-yCX"/>
+<button aria-label="Wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform" onclick="this.classList.toggle('text-primary'); this.querySelector('span').classList.toggle('fill-1');" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="p-space-xs pt-space-sm flex flex-col justify-between flex-1">
+<div>
+<span class="font-label-sm text-[10px] uppercase tracking-wider text-on-surface-variant">Aromatics</span>
+<h3 class="font-body-md text-body-md font-medium text-on-surface truncate">Nocturne Botanical Elixir</h3>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">$130</span>
+<button aria-label="Quick Add" class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface active:bg-primary active:text-on-primary transition-colors" onclick="triggerToast('Added Nocturne Elixir to Bag')" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md py-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1.5 active:scale-98 transition-transform" type="button">
+<span>Load More Creations</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</section>
+<!-- Social Proof & Customer Reviews Snippet -->
+<section class="mt-space-xl px-margin-mobile">
+<div class="bg-surface-container-low rounded-2xl p-space-lg shadow-sm flex flex-col items-center text-center">
+<!-- Verified Rating Summary -->
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1 tracking-tight">4.9 / 5.0 Exceptional Rating</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Over 3,240 verified client testimonials</span>
+<!-- Quote Carousel Single View -->
+<div class="mt-space-md p-space-md bg-surface-container-lowest rounded-xl shadow-sm w-full text-left relative">
+<span class="material-symbols-outlined text-outline-variant text-[24px] mb-1 opacity-50">format_quote</span>
+<p class="font-title-editorial text-title-editorial text-on-surface italic leading-relaxed">
+          "The cashmere trench is completely unmatched in drape and weight. It arrived beautifully packaged without single-use plastics. LUMEN defines what modern luxury should be."
+        </p>
+<div class="flex items-center gap-space-sm mt-space-md">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-xs">
+            EC
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface">Eleanor C.</span>
+<span class="material-symbols-outlined text-tertiary text-[14px]">verified</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Verified Buyer • New York</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Instagram Feed -->
+<section class="mt-space-lg">
+<div class="flex items-center justify-between px-margin-mobile mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block">Community</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">@lumenlifestyle</h2>
+</div>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Follow</a>
+</div>
+<div class="flex gap-space-xs overflow-x-auto px-margin-mobile no-scrollbar pb-space-xs">
+<div class="w-32 h-32 shrink-0 rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="Customer living space interior with a LUMEN ceramic vase on a low oak coffee table beside morning coffee, warm sunlit vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPHShz5dCDLG1cykxMzsxm5ahli_8N5tlBVHJN6Y5jGpPuP7erjJPwz0AXySEzftEPjreX1OekvrdMsZkMPts31I2hiEVXGil9CWECK6IChx2WwdEDxWNpI4b8RRabdtrZhAaWakbkeyXC2YcIRmz15rbGvDUWz4WDCM7cfdRA0ef9LRkyIf1xV86UcuztomCHDMDh6xqMeiezUCo_qfR9KtH8OR4x6s--M-s6SzMgRmyyRxI527Cx"/>
+<div class="absolute inset-0 bg-inverse-surface/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="w-32 h-32 shrink-0 rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="Stylish Parisian street outfit incorporating a camel oversized coat and structured leather tote bag walking past an architectural cafe facade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr9frc_bHIk4d7pwP-tN_osQqOtOkQVxyMg8okbp_9GsEjzTYZTqVO0TONo0MWOujm2hnxkzrpuljrbFMvJqIGI_f_-Vcq-r3BEfFzUQceMCgw_FGf4TuunhgR6J1bp6ZHImxQHj3NeXAHee47cUZ9uUP13UCh575yvEnszG0gpnGAt9vLU-qBW9Kqg7lsgwgo9s53P3Fzu8Ax30gk9ZvI3bKX80YkwRF99A2NoY9-mTcAZmvftPyR"/>
+<div class="absolute inset-0 bg-inverse-surface/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="w-32 h-32 shrink-0 rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="Nightstand aesthetic with a glowing scented candle and aesthetic reading glasses on open linen pages, atmospheric mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnzCoLSfuDF8uE3D6lMWWcIKAqSnBHgFxTlr67cLwTqDYJjG_jFBEHH840bfCbZlXzC_9U6qRLixnKVPeUE59lV1iDwU4FOIPHvB8jFf8ZzdrvVuBzSV_ySFPg7_S8nTx6ja4V_zdHa1yMhZD6BhCDZvSGPtyVnm83YI42W6mo2lMKnzhkclAuEZbGEkfFD3U5nyQmdDZcOz46l6NlDPmt68wjRKE7eGTna26pKv9K9_LhIMT2USBQ"/>
+<div class="absolute inset-0 bg-inverse-surface/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="w-32 h-32 shrink-0 rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="Minimalist wrist wearing an artisan bronze cuff bracelet resting gently on cream woven knitwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTYKRo6H1cdAZkoJBbtvKmo2McNwiomiFRDWaoqvZtJ6g7VlPSS-razGqVQbbXQMEsvzzldvuR_Rr7brz9-1KWMPLiC6yTuJ-Z0dbNltuns9T5nOM2muo85praNXm_-hQRSguNzZ6RGch5U2ei_TJYAEkXd0DL9NSfojg6BbMB6Yr-8-XlZlfsTCuxjyZvNEE0Xu4hecn_EQCwSkbLYxtprSLzwubb08A3QVg8Oi7-ga43emSrLHfN"/>
+<div class="absolute inset-0 bg-inverse-surface/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Signup with 15% Incentive -->
+<section class="px-margin-mobile mt-space-lg">
+<div class="bg-surface-container rounded-2xl p-space-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block">The LUMEN Journal</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight mt-1">Receive 15% Off Your First Order</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+        Be the first to access limited atelier releases, private seasonal invitations, and editorial essays.
+      </p>
+<form class="mt-space-md flex flex-col gap-space-xs" onsubmit="event.preventDefault(); triggerToast('Thank you! Welcome code LUMEN15 sent.');">
+<div class="flex items-center bg-surface-container-lowest rounded-xl px-space-md py-space-xs shadow-sm">
+<span class="material-symbols-outlined text-outline text-[20px] mr-2">mail</span>
+<input class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm focus:outline-none" placeholder="Enter your email address" required="" type="email"/>
+</div>
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-md active:scale-95 transition-transform" type="submit">
+          Unlock Privilege
+        </button>
+</form>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80 mt-2 block text-center">Unsubscribe anytime. We respect your intentionality.</span>
+</div>
+</section>
+<!-- Service Guarantees Badges -->
+<section class="px-margin-mobile mt-space-lg grid grid-cols-3 gap-space-xs text-center">
+<div class="flex flex-col items-center p-space-sm bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary text-[22px]">published_with_changes</span>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface mt-1">30-Day Returns</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant">Complimentary pick-up</span>
+</div>
+<div class="flex flex-col items-center p-space-sm bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-tertiary text-[22px]">eco</span>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface mt-1">Carbon Neutral</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant">Offset packaging</span>
+</div>
+<div class="flex flex-col items-center p-space-sm bg-surface-container-low rounded-xl">
+<span class="material-symbols-outlined text-primary text-[22px]">workspace_premium</span>
+<span class="font-label-sm text-[11px] font-semibold text-on-surface mt-1">Artisan Verified</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant">Ethical ateliers</span>
+</div>
+</section>
+<!-- Interactive Toast Notification Element -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-opacity duration-300 flex items-center gap-2 px-4 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface shadow-xl text-xs font-label-md" id="interactive-toast">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">check_circle</span>
+<span id="toast-message">Item updated</span>
+</div>
+</div>
+<script>
+  // Countdown Timer Micro-Interaction
+  (function initTimer() {
+    let secondsRemaining = 14 * 3600 + 28 * 60 + 49;
+    const timerEl = document.getElementById('promo-timer');
+    if (!timerEl) return;
+    
+    setInterval(() => {
+      if (secondsRemaining > 0) {
+        secondsRemaining--;
+        const hours = Math.floor(secondsRemaining / 3600);
+        const minutes = Math.floor((secondsRemaining % 3600) / 60);
+        const seconds = secondsRemaining % 60;
+        timerEl.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      }
+    }, 1000);
+  })();
+
+  // Micro Toast Alert for Cart / Wishlist Actions
+  function triggerToast(message) {
+    const toast = document.getElementById('interactive-toast');
+    const toastMsg = document.getElementById('toast-message');
+    if (!toast || !toastMsg) return;
+    
+    toastMsg.textContent = message;
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2400);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_10px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-label-md"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center py-space-xs min-h-[48px] transition-colors text-primary font-label-md" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex-1 flex flex-col items-center justify-center py-space-xs min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="shop" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-sm text-label-sm">Shop</span></a><a class="flex-1 relative flex flex-col items-center justify-center py-space-xs min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="wishlist" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">favorite</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[14px] h-3.5 px-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[9px] leading-none">2</span></div><span class="font-label-sm text-label-sm">Wishlist</span></a><a class="flex-1 relative flex flex-col items-center justify-center py-space-xs min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[14px] h-3.5 px-0.5 rounded-full bg-primary text-on-primary font-label-sm text-[9px] leading-none">3</span></div><span class="font-label-sm text-label-sm">Cart</span></a><a class="flex-1 flex flex-col items-center justify-center py-space-xs min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

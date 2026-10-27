@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>LUMEN — Modern Luxury Atelier & Storefront</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <!-- Tailwind CSS Engine & Custom Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <!-- Shared Style System -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-full flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+  <!-- Fixed Top Header -->
+  <header class="fixed top-0 w-full z-50 glass-nav shadow-sm pt-safe">
+    <!-- Announcement Bar -->
+    <div class="bg-on-surface text-surface-container-lowest px-4 py-1.5 flex items-center justify-between font-label-sm text-[11px] tracking-widest uppercase">
+      <div class="lumen-container flex items-center justify-between w-full">
+        <span class="truncate">Complimentary Worldwide Express Freight over $150 | Code: <strong class="text-primary-fixed underline decoration-primary-fixed">LUMEN10</strong></span>
+        <div class="hidden sm:flex items-center gap-4 shrink-0">
+          <span class="text-surface-container-highest/70">Atelier Concierge: +1 (800) 492-0192</span>
+          <button aria-label="Currency" class="flex items-center gap-1 hover:text-primary-fixed transition-colors" type="button" onclick="showToast('Currency: USD ($)')">
+            <span>USD $</span>
+            <span class="material-symbols-outlined text-[13px]">expand_more</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="lumen-container h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <img alt="LUMEN Logo" class="h-9 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/>
+        <div class="flex flex-col">
+          <span class="font-editorial text-2xl font-bold tracking-tight text-on-surface">LUMEN</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-on-surface-variant -mt-1 font-semibold">Atelier Lifestyle</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+        <a href="index.html" class="text-primary font-bold border-b-2 border-primary pb-1" data-path="home">Home</a>
+        <a href="shop.html" class="text-on-surface-variant hover:text-primary transition-colors pb-1" data-path="shop">Collection</a>
+        <a href="shop.html" class="text-on-surface-variant hover:text-primary transition-colors pb-1">Outerwear</a>
+        <a href="shop.html" class="text-on-surface-variant hover:text-primary transition-colors pb-1">Objects</a>
+        <a href="shop.html" class="text-on-surface-variant hover:text-primary transition-colors pb-1">Botanicals</a>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+        <!-- Desktop Search Bar -->
+        <div class="hidden lg:flex items-center bg-surface-container rounded-full px-3.5 py-1.5 w-60 border border-outline-variant/30 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+          <span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span>
+          <input class="w-full bg-transparent text-xs text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none" placeholder="Search cashmere, ceramics..." type="text" onkeydown="if(event.key==='Enter') window.location.href='shop.html'"/>
+        </div>
+
+        <button aria-label="Search" class="lg:hidden w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button" onclick="window.location.href='shop.html'">
+          <span class="material-symbols-outlined text-[22px]">search</span>
+        </button>
+
+        <!-- Wishlist -->
+        <button aria-label="Wishlist" class="relative w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none rounded-full hover:bg-surface-container" type="button" onclick="showToast('Your Saved Curations (2 pieces)', 'favorite')">
+          <span class="material-symbols-outlined text-[22px]">favorite</span>
+          <span class="wishlist-count-badge absolute top-1.5 right-1.5 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-none">2</span>
+        </button>
+
+        <!-- Cart Bag -->
+        <a href="cart.html" aria-label="Shopping Cart" class="relative w-10 h-10 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none rounded-full hover:bg-surface-container">
+          <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+          <span class="cart-count-badge absolute top-1.5 right-1.5 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-none">3</span>
+        </a>
+
+        <!-- Patron Avatar -->
+        <div class="pl-2 flex items-center cursor-pointer" onclick="showToast('Patron Account: Verified Atelier Member', 'person')">
+          <img alt="Patron" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20 hover:ring-primary transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pbn7AtDgkfq3byt9VdCD9s0doNwbzM5XNCN9gXYUhG_3eIsL8Lt_dy3Ejn0VLfPl2_TM3lQBsCh2R815PPGU7YgteSmramRL6Bkrf7V9CTQOEujdLKqZ9-MDBayu4iuedMbZcpYjphgrtP7icqAAnmKsvUxThNVNlJB1Mn090DZ7FG6jW3m5s8o1WSKrfV3n6GrernEQZN2p1bBtPZRyFdfiizIjlsDcugsmXHOV_rmO5vhlAb0J"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Body Content -->
+  <main class="flex-1 flex flex-col w-full pt-28 pb-20 bg-surface">
+
+    <!-- Hero Section: Constrained & Balanced (Never Takes Whole Screen Height) -->
+    <section class="lumen-container mb-12">
+      <div class="relative w-full rounded-3xl overflow-hidden shadow-lg hero-constrained flex flex-col justify-end bg-inverse-surface border border-outline-variant/20">
+        <!-- Background Image with controlled focal position -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD784-TbdfgpfG2VZo9zqvVnhErmSW82IBBv63pHA2uiaiVRSEpkJY_T01VSdQvSo33xw_T-g7YINaSs2_xtTNZ9FqYfTIIljTEH-ylfxyPdZI2wmnWkfRvQi5KBJIgT9Zq8afqZaJsgA7jlU5mMT5mGPgI9PigWPA8ltjxmVuA0VUdsHS2HxNDznYrk5v-bGLbcTSCdDeIIsYV4emSN8RCQTbZ3wtGN93kSqRO1xZZHy5FHRMHPfst');"></div>
+        <!-- High Fashion Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
+        
+        <!-- Hero Content Overlay -->
+        <div class="relative z-10 p-6 sm:p-10 lg:p-14 max-w-2xl text-white">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md mb-3 border border-white/20">
+            <span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+            <span class="font-label-sm text-[11px] text-white uppercase tracking-widest font-semibold">Atelier Curation No. 04</span>
+          </div>
+          <h1 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-tight">
+            The Autumn Resonance
+          </h1>
+          <p class="font-body-md text-sm sm:text-base text-white/80 mt-2 max-w-lg leading-relaxed">
+            Sculptural silhouettes, unbleached raw silks, and tactile ceramic artifacts designed for deliberate living.
+          </p>
+          <div class="flex items-center gap-3 sm:gap-4 mt-6">
+            <a href="shop.html" class="px-6 py-3 rounded-xl bg-primary text-white font-label-md text-label-md uppercase tracking-wider shadow-md hover:bg-primary-hover active:scale-95 transition-all flex items-center gap-2">
+              <span>Explore Collection</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+            <a href="product-detail.html" class="px-6 py-3 rounded-xl bg-white/20 hover:bg-white/30 backdrop-blur-md text-white font-label-md text-label-md uppercase tracking-wider active:scale-95 transition-all">
+              Featured Coat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Categories Bar (Constrained & Elegant) -->
+    <section class="lumen-container mb-14">
+      <div class="flex items-end justify-between mb-6 pb-2 border-b border-outline-variant/30">
+        <div>
+          <span class="font-label-sm text-[11px] text-primary uppercase tracking-widest font-bold block mb-1">Curated Spheres</span>
+          <h2 class="font-editorial text-2xl sm:text-3xl font-medium text-on-surface">Explore Categories</h2>
+        </div>
+        <a href="shop.html" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1">
+          <span>All Spheres</span>
+          <span class="material-symbols-outlined text-[16px]">east</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
+        <!-- Category 1 -->
+        <a href="shop.html" class="group flex flex-col items-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-xs border border-outline-variant/20 group-hover:scale-105 transition-transform">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9I2XqGv57_ONVrl3xlOJ6Rl7jB0icQBqhfNFlboudkLQKCtzH3S2sGkXTUp9TWqZ6VMqxtaZ-0zAUf3kpm4lUXEWmnEWsr78dC_gkIl0GRjW4MuIu4HRvQL5qQ9b7Md2Qj2yjQs4sbZbK1_YaDmAayjPvjX2LlHu5cr-zfjegp7U82OKkSnaYzpsnxn9u0g8vAb1bMBd6uvTW6xGETFA0-kmg9HO8csaCG5lhCMvnPwo5atx-gwaz" alt="Apparel"/>
+          </div>
+          <span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Apparel</span>
+          <span class="text-[11px] text-on-surface-variant">142 items</span>
+        </a>
+
+        <!-- Category 2 -->
+        <a href="shop.html" class="group flex flex-col items-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-xs border border-outline-variant/20 group-hover:scale-105 transition-transform">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSjoleYdWBjBMLBeTuOVIZgRD6ABYNLRlIqTjoHyZiXsEvTMJe2g_mf2tKUeOOVorXyE_u_DRlAGoVBZ5nQySAUynx2XukFC39Pw_7aC9yQ5vsCa68R7OeOO4Gm3xoEnjtRubtwm9fBvHODdL-sdzYVqdu-sYtjsm8iEBhLCgKpGVGFZ2jVvPLFytFEMcCf0TYyaJekybrYpcfhsMku3d-8SpPRAHxHNGW8E13xKitlwYSGcXtt9Il" alt="Objects"/>
+          </div>
+          <span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Objects</span>
+          <span class="text-[11px] text-on-surface-variant">68 items</span>
+        </a>
+
+        <!-- Category 3 -->
+        <a href="shop.html" class="group flex flex-col items-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-xs border border-outline-variant/20 group-hover:scale-105 transition-transform">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ9I5D7cnzsvqx6_ujOluA4fW9-sw-a6a5l3AjGr46_GwRdtt3TaFpmsJ3v38u_wsPiyypfy2I_1WdA9PweQesN44lkbOGu0FGUmbH1UqHGlTzFoHYQa59COVeETLo_YbfE8S2Y67M2LIF9Wv_x_GEFa5qf9shSsb8ArgDZxGbQ9khk0q6_36IpxQP8D8rch451C7UPmOmfBwg07rsCHxcOesp5-7Sd7GYPUz38MGATxAS0ADKgnr_" alt="Fine Scents"/>
+          </div>
+          <span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Fine Scents</span>
+          <span class="text-[11px] text-on-surface-variant">34 items</span>
+        </a>
+
+        <!-- Category 4 -->
+        <a href="shop.html" class="group flex flex-col items-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-xs border border-outline-variant/20 group-hover:scale-105 transition-transform">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaQ2uy5KlxIWaQzxK_QauVT4IlAhmZXCniAZ_6S5Ovpbgvk6dqgEUfW23J44D-5yFYNXEQ6M3E5mIqmHVe71Tm6UBGRmSTbd_lkJJJCnkqMgJvYidNqEisjCq99ScQvJtFGWTX_KxsEvOOzw-aueGLke3r6sF6V90XS9PmejP_kSbIqTj9wMcFdSQSoKyJbrVRtwRs13SoWBXRjtBGZJJH4oZZXkGua04yg6y8ni3WexAhGJPIxrPG" alt="Leather"/>
+          </div>
+          <span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Leather</span>
+          <span class="text-[11px] text-on-surface-variant">51 items</span>
+        </a>
+
+        <!-- Category 5 -->
+        <a href="shop.html" class="group flex flex-col items-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center col-span-2 sm:col-span-1">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-xs border border-outline-variant/20 group-hover:scale-105 transition-transform">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6MjC7b2FWS8EclMzRd_LtyNZPFP6YI4huoG7Hdcf86F7ckcCbrY27yHOJURHL-AqcRGQN6EmKMWNmleGIedre7i_mVnrZEsnyS8Absizg0uSbB3RqT4i-g3_-714Q5mNZz7hwm6q2MtQIS6jCQmoFFEUnsM_Va-aSbFAtZMDzBXVelcxm_1_KC8zPWX08BxKM4U3lx1yNk0sYAh947Ak3nw0DlNI3r8bKD8Xp-RfRTWCKqDo0L5Du" alt="Footwear"/>
+          </div>
+          <span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Footwear</span>
+          <span class="text-[11px] text-on-surface-variant">42 items</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Best Sellers Section: 4-Column Balanced Grid -->
+    <section class="lumen-container mb-16">
+      <div class="flex items-end justify-between mb-6 pb-2 border-b border-outline-variant/30">
+        <div>
+          <div class="flex items-center gap-1.5 text-primary">
+            <span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+            <span class="font-label-sm text-[11px] uppercase tracking-widest font-bold">Client Favorites</span>
+          </div>
+          <h2 class="font-editorial text-2xl sm:text-3xl font-medium text-on-surface mt-0.5">Best Sellers</h2>
+        </div>
+        <a href="shop.html" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1">
+          <span>View Catalog</span>
+          <span class="material-symbols-outlined text-[16px]">east</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Product Card 1 -->
+        <article class="lumen-card flex flex-col p-3 rounded-2xl relative group">
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high mb-3">
+            <a href="product-detail.html" class="block">
+              <img class="card-img-bounded group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB_y3nQLIf_Zc_LmOeMF2lJvuFjRLFuEVCrQkDLjFJOzN80Il-f0PLz2_pwvNDRNgA5X5QG-jkeBOVG7qHc1DSnhv1hnOT-Wj1lcv2J6VHif8jAGKXEYW2ndh6NhS5F1QIKUrq0JKYPywfj2IPv7SHpnIyH4WHjrWSdjZTxTpY4tcrddFEwSZb6f9UVoqCKAXMXnI4EjIo7tb2ftykg7nhFpeEVNqQStFXqMwcWQvB1EutXbCaYAeP" alt="Aura Wool Cashmere Overcoat"/>
+            </a>
+            <span class="absolute top-2 left-2 badge-lumen bg-surface/90 text-on-surface shadow-xs">Iconic</span>
+            <button aria-label="Wishlist" class="wishlist-toggle-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-xs" data-product-id="p1-overcoat" data-product-title="Aura Cashmere Overcoat" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                <span class="uppercase font-semibold text-[10px] tracking-wider text-secondary">Outerwear</span>
+                <span class="flex items-center text-primary font-bold"><span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.9</span>
+              </div>
+              <a href="product-detail.html" class="hover:text-primary transition-colors">
+                <h3 class="font-editorial text-base font-semibold text-on-surface line-clamp-1">Aura Cashmere Overcoat</h3>
+              </a>
+              <span class="text-xs text-tertiary">100% Recycled Cashmere</span>
+            </div>
+            <div class="flex items-center justify-between pt-3 mt-2 border-t border-outline-variant/20">
+              <div class="flex items-baseline gap-1.5">
+                <span class="font-editorial text-lg font-bold text-primary">$380</span>
+                <span class="text-xs text-secondary line-through">$440</span>
+              </div>
+              <button class="h-9 px-3 rounded-xl bg-primary text-white font-label-sm text-xs font-semibold flex items-center gap-1 hover:bg-primary-hover active:scale-95 transition-all shadow-xs" onclick="addToCart({ id: 'p1-overcoat', title: 'Aura Wool Cashmere Overcoat', subtitle: 'Collection No. 04', variant: 'Warm Camel · M', price: 380, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCB_y3nQLIf_Zc_LmOeMF2lJvuFjRLFuEVCrQkDLjFJOzN80Il-f0PLz2_pwvNDRNgA5X5QG-jkeBOVG7qHc1DSnhv1hnOT-Wj1lcv2J6VHif8jAGKXEYW2ndh6NhS5F1QIKUrq0JKYPywfj2IPv7SHpnIyH4WHjrWSdjZTxTpY4tcrddFEwSZb6f9UVoqCKAXMXnI4EjIo7tb2ftykg7nhFpeEVNqQStFXqMwcWQvB1EutXbCaYAeP' })" type="button">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 2 -->
+        <article class="lumen-card flex flex-col p-3 rounded-2xl relative group">
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high mb-3">
+            <a href="product-detail.html" class="block">
+              <img class="card-img-bounded group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDXeuwkNfEAQMBirmr4gucsVgUUdndq7pdlRxGzsr-YorLjXXAOF6B1Obx-pI5HQPDbEHMnlXduYRoGcSO1mT2qOdFX5w8WppfoqfSh9scv3O3ScOmiVkw1zC7KneqPtyl84P3_MwdaNvVjMJn0AaFqqmMlEuFxlESO6YPPiCC_nt5UHOfVY9O4NcpgRpQPJlVwTR4-ghdjE4EfOmBuy56csvHqT9mc4RsgZ9I8qRHTL5gLFFzOrO5" alt="Santal Diffuser"/>
+            </a>
+            <span class="absolute top-2 left-2 badge-lumen bg-tertiary text-white shadow-xs">Artisan</span>
+            <button aria-label="Wishlist" class="wishlist-toggle-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-xs" data-product-id="p-diffuser" data-product-title="Santal Minimalist Diffuser" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                <span class="uppercase font-semibold text-[10px] tracking-wider text-secondary">Apothecary</span>
+                <span class="flex items-center text-primary font-bold"><span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 5.0</span>
+              </div>
+              <a href="product-detail.html" class="hover:text-primary transition-colors">
+                <h3 class="font-editorial text-base font-semibold text-on-surface line-clamp-1">Santal Minimalist Diffuser</h3>
+              </a>
+              <span class="text-xs text-on-surface-variant">Cardamom &amp; Cedarwood</span>
+            </div>
+            <div class="flex items-center justify-between pt-3 mt-2 border-t border-outline-variant/20">
+              <span class="font-editorial text-lg font-bold text-on-surface">$75</span>
+              <button class="h-9 px-3 rounded-xl bg-primary text-white font-label-sm text-xs font-semibold flex items-center gap-1 hover:bg-primary-hover active:scale-95 transition-all shadow-xs" onclick="addToCart({ id: 'p-diffuser', title: 'Santal Minimalist Diffuser', subtitle: 'Maison Scent', variant: '250ml Oil Infusion', price: 75, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDXeuwkNfEAQMBirmr4gucsVgUUdndq7pdlRxGzsr-YorLjXXAOF6B1Obx-pI5HQPDbEHMnlXduYRoGcSO1mT2qOdFX5w8WppfoqfSh9scv3O3ScOmiVkw1zC7KneqPtyl84P3_MwdaNvVjMJn0AaFqqmMlEuFxlESO6YPPiCC_nt5UHOfVY9O4NcpgRpQPJlVwTR4-ghdjE4EfOmBuy56csvHqT9mc4RsgZ9I8qRHTL5gLFFzOrO5' })" type="button">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 3 -->
+        <article class="lumen-card flex flex-col p-3 rounded-2xl relative group">
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high mb-3">
+            <a href="product-detail.html" class="block">
+              <img class="card-img-bounded group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3509_Ft5b-vavDtH0dBohDvB5FaNCOCHQ6qUKB1I50FlN9ijwcWl1eGklUlYXc7ZlitnnDWaM6fatRnP5z3wjsDbeJJT8fCCkFKW781vEqmDDPsrSeHSyMqS5Nj-dR0B2ep2z-emGMOPLCVLeNgMp5VFtfM8UqUKkSBfCtb4Vvf5efL9ltQGFMVcOyHL6E9bEH7M2E25_8FYtj2F4VmViBQj9r_U06JZD_67unK_OMHkWB3F85a1b" alt="Terra Formed Ceramic Vase"/>
+            </a>
+            <span class="absolute top-2 left-2 badge-lumen bg-primary-container text-white shadow-xs">Studio Batch</span>
+            <button aria-label="Wishlist" class="wishlist-toggle-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-xs" data-product-id="p-vase" data-product-title="Terra Formed Ceramic Vase" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                <span class="uppercase font-semibold text-[10px] tracking-wider text-secondary">Ceramics</span>
+                <span class="flex items-center text-primary font-bold"><span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.8</span>
+              </div>
+              <a href="product-detail.html" class="hover:text-primary transition-colors">
+                <h3 class="font-editorial text-base font-semibold text-on-surface line-clamp-1">Terra Formed Ceramic Vase</h3>
+              </a>
+              <span class="text-xs text-tertiary">Wheel Hand-Thrown</span>
+            </div>
+            <div class="flex items-center justify-between pt-3 mt-2 border-t border-outline-variant/20">
+              <span class="font-editorial text-lg font-bold text-on-surface">$110</span>
+              <button class="h-9 px-3 rounded-xl bg-primary text-white font-label-sm text-xs font-semibold flex items-center gap-1 hover:bg-primary-hover active:scale-95 transition-all shadow-xs" onclick="addToCart({ id: 'p-vase', title: 'Terra Formed Ceramic Vase', subtitle: 'Atelier Terre', variant: 'Sand Textured Clay', price: 110, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB3509_Ft5b-vavDtH0dBohDvB5FaNCOCHQ6qUKB1I50FlN9ijwcWl1eGklUlYXc7ZlitnnDWaM6fatRnP5z3wjsDbeJJT8fCCkFKW781vEqmDDPsrSeHSyMqS5Nj-dR0B2ep2z-emGMOPLCVLeNgMp5VFtfM8UqUKkSBfCtb4Vvf5efL9ltQGFMVcOyHL6E9bEH7M2E25_8FYtj2F4VmViBQj9r_U06JZD_67unK_OMHkWB3F85a1b' })" type="button">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product Card 4 -->
+        <article class="lumen-card flex flex-col p-3 rounded-2xl relative group">
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high mb-3">
+            <a href="product-detail.html" class="block">
+              <img class="card-img-bounded group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr-jZfBkt8HpOtBpEihNI_fknvQ7gw5wbDWc4pVlQKQa8CnxX1x19egkoatkTqtox6qob2EBim4AkG2XL5qdTUSFI8E_lx6d8bFdVj8kXBUIsRdFihBSDhd3JcWNyw1SxLSsyBENqJc9jXF5LEntoTxxxKDx7CguzkPva0gSfuBa3y4iHFdhkUNqRBN4PxVd_QZQX34kOq9JgGSJq21q6WV9XsBbvS3K3XlmvXf5FEI9wbLwv9brjn" alt="Santal Candle"/>
+            </a>
+            <span class="absolute top-2 left-2 badge-lumen bg-tertiary text-white shadow-xs">Top Rated</span>
+            <button aria-label="Wishlist" class="wishlist-toggle-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-xs" data-product-id="p2-candle" data-product-title="Santal & Amber Candle" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+                <span class="uppercase font-semibold text-[10px] tracking-wider text-secondary">Apothecary</span>
+                <span class="flex items-center text-primary font-bold"><span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 4.7</span>
+              </div>
+              <a href="product-detail.html" class="hover:text-primary transition-colors">
+                <h3 class="font-editorial text-base font-semibold text-on-surface line-clamp-1">Santal &amp; Amber Candle</h3>
+              </a>
+              <span class="text-xs text-on-surface-variant">300g · 65hr Clean Burn</span>
+            </div>
+            <div class="flex items-center justify-between pt-3 mt-2 border-t border-outline-variant/20">
+              <span class="font-editorial text-lg font-bold text-on-surface">$62</span>
+              <button class="h-9 px-3 rounded-xl bg-primary text-white font-label-sm text-xs font-semibold flex items-center gap-1 hover:bg-primary-hover active:scale-95 transition-all shadow-xs" onclick="addToCart({ id: 'p2-candle', title: 'Santal & Amber Candle', subtitle: 'Maison Scent', variant: '300g Candle', price: 62, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAr3cIHZ7SR8Cg_MSXfRxEm13lc1FbSUz2DHoppZTDwsdAo3Mcydi6Gh-BhdGZzsxtybV2JSl9RBKWs9Qo6dk1SEahRlI1mH4m_eNXW_HpjX9ewkYf-XDrTAPuXQGB0CYyhFtXxC0hT6zuCfO2BpBiFzRcYaKyP8bOoZQ9FWXVQtK135CIvtk2TuaJ0PDxMRPi166UeiP9WcACcyn5vZ0x-cUL9wWhlBgGBC0zlqQCrZP4ng15VnvX7' })" type="button">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Editorial Member Pass Split Banner -->
+    <section class="lumen-container mb-16">
+      <div class="relative overflow-hidden rounded-3xl bg-surface-container-high p-6 sm:p-10 border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-xl">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="badge-lumen bg-primary text-white">Private Pass</span>
+            <div class="flex items-center gap-1 px-3 py-1 rounded-full bg-white shadow-xs text-xs font-semibold text-on-surface">
+              <span class="material-symbols-outlined text-primary text-[15px]">schedule</span>
+              <span id="promo-timer">14:28:49</span>
+            </div>
+          </div>
+          <h2 class="font-editorial text-2xl sm:text-3xl text-on-surface font-semibold tracking-tight leading-snug">
+            Private Access: 20% Off Sustainable Series
+          </h2>
+          <p class="font-body-md text-sm sm:text-base text-on-surface-variant mt-2 leading-relaxed">
+            Apply member privilege pass <strong class="text-primary font-bold">LUMENEARTH</strong> at checkout. Natural traceable raw materials from verified European ateliers.
+          </p>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="shop.html" class="px-6 py-3 rounded-xl bg-inverse-surface text-white font-label-md text-label-md uppercase tracking-wider hover:opacity-90 active:scale-95 transition-all flex items-center gap-2">
+            <span>Claim Privilege</span>
+            <span class="material-symbols-outlined text-[18px]">lock_open</span>
+          </a>
+          <button class="px-4 py-3 rounded-xl bg-white text-on-surface border border-outline-variant/30 font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container active:scale-95 transition-all flex items-center gap-1.5" onclick="navigator.clipboard?.writeText('LUMENEARTH'); showToast('Privilege Code LUMENEARTH Copied!');" type="button">
+            <span class="material-symbols-outlined text-[18px]">content_copy</span>
+            <span>Copy</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated New Arrivals: 4-Column Grid -->
+    <section class="lumen-container mb-16">
+      <div class="flex items-end justify-between mb-6 pb-2 border-b border-outline-variant/30">
+        <div>
+          <span class="font-label-sm text-[11px] text-primary uppercase tracking-widest font-bold block mb-1">Autumn Capsule</span>
+          <h2 class="font-editorial text-2xl sm:text-3xl font-medium text-on-surface">New Arrivals</h2>
+        </div>
+        <a href="shop.html" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1">
+          <span>Explore All 32 Pieces</span>
+          <span class="material-symbols-outlined text-[16px]">east</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- New Arrival 1 -->
+        <article class="lumen-card flex flex-col p-3 rounded-2xl relative group">
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high mb-3">
+            <a href="product-detail.html" class="block">
+              <img class="card-img-bounded group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJW9Qgj3LGtNObeleKqEsZK0jbiSMQIWmScFGYfboXzfm3R33exltt53GRMoW5JXGYx2Gujv2U_HxLvIrGuAcwiIpRtyI9a1oiAdjGXJCZzRlU2nF3Ywy4GdMRj5rLE5Xs3lfkNjc5snvNRD3ol2QJXDkyxLv1Zd4-r8BqRwg4l-a3W7BbbOx2M4nEMUC5WCJUx4nQPyssrejB3yAgf7oTW6Jjh13DRanZalI4U3RxmHoFwUOKaJoq" alt="Ribbed Meridian Polo"/>
+            </a>
+            <span class="absolute top-2 left-2 badge-lumen bg-surface/90 text-on-surface shadow-xs">New</span>
+            <button aria-label="Wishlist" class="wishlist-toggle-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-xs" data-product-id="p-polo" data-product-title="Ribbed Meridian Polo" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <span class="uppercase font-semibold text-[10px] tracking-wider text-secondary">Knitwear</span>
+              <a href="product-detail.html" class="hover:text-primary transition-colors">
+                <h3 class="font-editorial text-base font-semibold text-on-surface line-clamp-1">Ribbed Meridian Polo</h3>
+              </a>
+            </div>
+            <div class="flex items-center justify-between pt-3 mt-2 border-t border-outline-variant/20">
+              <span class="font-editorial text-lg font-bold text-on-surface">$165</span>
+              <button class="h-9 px-3 rounded-xl bg-primary text-white font-label-sm text-xs font-semibold flex items-center gap-1 hover:bg-primary-hover active:scale-95 transition-all shadow-xs" onclick="addToCart({ id: 'p-polo', title: 'Ribbed Meridian Polo', subtitle: 'Atelier Knitwear', variant: 'Taupe · M', price: 165, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJW9Qgj3LGtNObeleKqEsZK0jbiSMQIWmScFGYfboXzfm3R33exltt53GRMoW5JXGYx2Gujv2U_HxLvIrGuAcwiIpRtyI9a1oiAdjGXJCZzRlU2nF3Ywy4GdMRj5rLE5Xs3lfkNjc5snvNRD3ol2QJXDkyxLv1Zd4-r8BqRwg4l-a3W7BbbOx2M4nEMUC5WCJUx4nQPyssrejB3yAgf7oTW6Jjh13DRanZalI4U3RxmHoFwUOKaJoq' })" type="button">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- New Arrival 2 -->
+        <article class="lumen-card flex flex-col p-3 rounded-2xl relative group">
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high mb-3">
+            <a href="product-detail.html" class="block">
+              <img class="card-img-bounded group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW_lQngaMDoQN01ntRuj3Gq3-oK6KoqOyOIDWPfP20hYBUw5cApCWERpG7F_w0hJgqtFNAmT7Yv9ooBMED-Zp9Tz1c6Gn68MiG5Vx0uEGMlfwhV_DRHfJn1LHtxnJKx7Y4cG1rm2fe7IA8ycxeenk00JIKtBW_Z_L-UXB9u16nA6KkWCbd4rh1dbnrZnw4HFtzbd6EfyK8nCzuf_ggOKdaMjDLb9vvLfusLmd4chf27Seu-IewDHIz" alt="Palermo Glove Loafer"/>
+            </a>
+            <span class="absolute top-2 left-2 badge-lumen bg-surface/90 text-on-surface shadow-xs">New</span>
+            <button aria-label="Wishlist" class="wishlist-toggle-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-xs" data-product-id="p-loafer" data-product-title="Palermo Glove Loafer" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <span class="uppercase font-semibold text-[10px] tracking-wider text-secondary">Footwear</span>
+              <a href="product-detail.html" class="hover:text-primary transition-colors">
+                <h3 class="font-editorial text-base font-semibold text-on-surface line-clamp-1">Palermo Glove Loafer</h3>
+              </a>
+            </div>
+            <div class="flex items-center justify-between pt-3 mt-2 border-t border-outline-variant/20">
+              <span class="font-editorial text-lg font-bold text-on-surface">$290</span>
+              <button class="h-9 px-3 rounded-xl bg-primary text-white font-label-sm text-xs font-semibold flex items-center gap-1 hover:bg-primary-hover active:scale-95 transition-all shadow-xs" onclick="addToCart({ id: 'p-loafer', title: 'Palermo Glove Loafer', subtitle: 'Atelier Footwear', variant: 'Olive Calfskin · 42', price: 290, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDW_lQngaMDoQN01ntRuj3Gq3-oK6KoqOyOIDWPfP20hYBUw5cApCWERpG7F_w0hJgqtFNAmT7Yv9ooBMED-Zp9Tz1c6Gn68MiG5Vx0uEGMlfwhV_DRHfJn1LHtxnJKx7Y4cG1rm2fe7IA8ycxeenk00JIKtBW_Z_L-UXB9u16nA6KkWCbd4rh1dbnrZnw4HFtzbd6EfyK8nCzuf_ggOKdaMjDLb9vvLfusLmd4chf27Seu-IewDHIz' })" type="button">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- New Arrival 3 -->
+        <article class="lumen-card flex flex-col p-3 rounded-2xl relative group">
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high mb-3">
+            <a href="product-detail.html" class="block">
+              <img class="card-img-bounded group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWhgkNwCFWl5Ko3a8w38NFDVXAIRFgmYAKVJk97X9JnhiaeTgoEKAvxuLHO_IpTFGszRE1uEzuTbVcfwcERJjdaz8LCEdQFv4lwRD03NlNGTUD5oG7iPrwrLjJcZLcpnktlwwb5zf6rl8AB2t-KRdH7vKP9nUI2OpudZgTlBU6MNmqbMAwNTYoD-NKMFv2OSw2no32k-5mGSIQkJpEu6-LmIeOsCbSHUlp7o_hRS_K375MJqy8zg25" alt="Solstice Bronze Valet"/>
+            </a>
+            <button aria-label="Wishlist" class="wishlist-toggle-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-xs" data-product-id="p-tray" data-product-title="Solstice Bronze Valet" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <span class="uppercase font-semibold text-[10px] tracking-wider text-secondary">Decor</span>
+              <a href="product-detail.html" class="hover:text-primary transition-colors">
+                <h3 class="font-editorial text-base font-semibold text-on-surface line-clamp-1">Solstice Bronze Valet</h3>
+              </a>
+            </div>
+            <div class="flex items-center justify-between pt-3 mt-2 border-t border-outline-variant/20">
+              <span class="font-editorial text-lg font-bold text-on-surface">$95</span>
+              <button class="h-9 px-3 rounded-xl bg-primary text-white font-label-sm text-xs font-semibold flex items-center gap-1 hover:bg-primary-hover active:scale-95 transition-all shadow-xs" onclick="addToCart({ id: 'p-tray', title: 'Solstice Bronze Valet', subtitle: 'Atelier Objects', variant: 'Solid Brushed Bronze', price: 95, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCWhgkNwCFWl5Ko3a8w38NFDVXAIRFgmYAKVJk97X9JnhiaeTgoEKAvxuLHO_IpTFGszRE1uEzuTbVcfwcERJjdaz8LCEdQFv4lwRD03NlNGTUD5oG7iPrwrLjJcZLcpnktlwwb5zf6rl8AB2t-KRdH7vKP9nUI2OpudZgTlBU6MNmqbMAwNTYoD-NKMFv2OSw2no32k-5mGSIQkJpEu6-LmIeOsCbSHUlp7o_hRS_K375MJqy8zg25' })" type="button">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- New Arrival 4 -->
+        <article class="lumen-card flex flex-col p-3 rounded-2xl relative group">
+          <div class="relative overflow-hidden rounded-xl bg-surface-container-high mb-3">
+            <a href="product-detail.html" class="block">
+              <img class="card-img-bounded group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNbPpMlb_8q2weN24Gk_quYfRBEBr4-oIbZQ-vtovMqh4rL-bICxn-rpu8weirWjVwIf8rHcQNDKeryhHDVprMQeFe-kYBmEbIoblVPmOwjmBMoVphb6R_4_sgOwNLxIFOWrw1iGrYtXvbDUsbWfnRymDVoH2oZYvBVbFDe0hO2o2knkGbC4PwE9aGLlTVpiQ31Hyy5QEjhFC7hC2lOgOYZ50ko4Gf6KX3jufCeNJqq4zy6b0m-yCX" alt="Nocturne Botanical Elixir"/>
+            </a>
+            <button aria-label="Wishlist" class="wishlist-toggle-btn absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-all shadow-xs" data-product-id="p-elixir" data-product-title="Nocturne Botanical Elixir" type="button">
+              <span class="material-symbols-outlined text-[18px]">favorite</span>
+            </button>
+          </div>
+          <div class="flex flex-col flex-1 justify-between">
+            <div>
+              <span class="uppercase font-semibold text-[10px] tracking-wider text-secondary">Aromatics</span>
+              <a href="product-detail.html" class="hover:text-primary transition-colors">
+                <h3 class="font-editorial text-base font-semibold text-on-surface line-clamp-1">Nocturne Botanical Elixir</h3>
+              </a>
+            </div>
+            <div class="flex items-center justify-between pt-3 mt-2 border-t border-outline-variant/20">
+              <span class="font-editorial text-lg font-bold text-on-surface">$130</span>
+              <button class="h-9 px-3 rounded-xl bg-primary text-white font-label-sm text-xs font-semibold flex items-center gap-1 hover:bg-primary-hover active:scale-95 transition-all shadow-xs" onclick="addToCart({ id: 'p-elixir', title: 'Nocturne Botanical Elixir', subtitle: 'Maison Scent', variant: '50ml Pure Extract', price: 130, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDNbPpMlb_8q2weN24Gk_quYfRBEBr4-oIbZQ-vtovMqh4rL-bICxn-rpu8weirWjVwIf8rHcQNDKeryhHDVprMQeFe-kYBmEbIoblVPmOwjmBMoVphb6R_4_sgOwNLxIFOWrw1iGrYtXvbDUsbWfnRymDVoH2oZYvBVbFDe0hO2o2knkGbC4PwE9aGLlTVpiQ31Hyy5QEjhFC7hC2lOgOYZ50ko4Gf6KX3jufCeNJqq4zy6b0m-yCX' })" type="button">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Social Proof & Testimonials -->
+    <section class="lumen-container mb-16">
+      <div class="bg-surface-container-low rounded-3xl p-8 sm:p-12 border border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="max-w-md">
+          <div class="flex items-center gap-1 text-primary mb-2">
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <h3 class="font-editorial text-2xl sm:text-3xl font-medium text-on-surface">4.9 / 5.0 Verified Rating</h3>
+          <p class="font-body-md text-sm text-on-surface-variant mt-2">
+            Over 3,240 verified global patrons experiencing mindful craftsmanship and sustainable packaging.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/20 max-w-lg flex-1">
+          <span class="material-symbols-outlined text-outline-variant text-[28px] opacity-40">format_quote</span>
+          <p class="font-editorial text-base sm:text-lg italic text-on-surface leading-relaxed mt-1">
+            "The cashmere trench is completely unmatched in drape and weight. It arrived beautifully packaged without single-use plastics. LUMEN defines what intentional luxury should be."
+          </p>
+          <div class="flex items-center gap-3 mt-4 pt-4 border-t border-outline-variant/20">
+            <div class="w-10 h-10 rounded-full bg-primary-fixed text-primary font-bold flex items-center justify-center text-sm">
+              EC
+            </div>
+            <div>
+              <span class="font-label-md text-sm font-semibold text-on-surface block">Eleanor C.</span>
+              <span class="text-xs text-secondary">Verified Patron • New York Atelier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantees Badges -->
+    <section class="lumen-container mb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="flex items-center gap-4 p-5 bg-white rounded-2xl border border-outline-variant/20 shadow-xs">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[26px]">published_with_changes</span>
+          </div>
+          <div>
+            <span class="font-label-md text-sm font-semibold text-on-surface block">30-Day Effortless Returns</span>
+            <span class="text-xs text-on-surface-variant">Doorstep collection or boutique exchange</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 p-5 bg-white rounded-2xl border border-outline-variant/20 shadow-xs">
+          <div class="w-12 h-12 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[26px]">eco</span>
+          </div>
+          <div>
+            <span class="font-label-md text-sm font-semibold text-on-surface block">100% Carbon Neutral Freight</span>
+            <span class="text-xs text-on-surface-variant">Certified climate offset packaging</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 p-5 bg-white rounded-2xl border border-outline-variant/20 shadow-xs">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[26px]">workspace_premium</span>
+          </div>
+          <div>
+            <span class="font-label-md text-sm font-semibold text-on-surface block">Artisan Verified Sourcing</span>
+            <span class="text-xs text-on-surface-variant">Nomadic ethical fiber cooperatives</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Complete Luxury Desktop & Tablet Footer -->
+  <footer class="bg-surface-container-low border-t border-outline-variant/30 pt-16 pb-24 md:pb-16 text-on-surface">
+    <div class="lumen-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+      <!-- Col 1: Brand Info -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img alt="LUMEN Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/>
+          <span class="font-editorial text-2xl font-bold tracking-tight">LUMEN</span>
+        </div>
+        <p class="font-body-sm text-sm text-on-surface-variant leading-relaxed max-w-sm mb-6">
+          Architectural silhouettes, raw unbleached natural fibers, and tactile interior artifacts handcrafted for deliberate living.
+        </p>
+        <div class="flex items-center gap-3 text-on-surface-variant">
+          <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-xs cursor-pointer hover:text-primary transition-colors">ig</span>
+          <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-xs cursor-pointer hover:text-primary transition-colors">pt</span>
+          <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-xs cursor-pointer hover:text-primary transition-colors">fb</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Spheres -->
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">Curated Spheres</h4>
+        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Outerwear &amp; Coats</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Mongolian Cashmere</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Stoneware Ceramics</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Botanical Scents</a></li>
+          <li><a href="shop.html" class="hover:text-primary transition-colors">Vegetable-Tanned Leather</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Concierge -->
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">Client Care</h4>
+        <ul class="space-y-2.5 text-sm text-on-surface-variant">
+          <li><a href="cart.html" class="hover:text-primary transition-colors">Order Status &amp; Tracking</a></li>
+          <li><a href="#" onclick="showToast('Complimentary 30-day returns accepted'); return false;" class="hover:text-primary transition-colors">Returns &amp; Exchanges</a></li>
+          <li><a href="product-detail.html" class="hover:text-primary transition-colors">Garment Size Guide</a></li>
+          <li><a href="#" onclick="showToast('Contact: concierge@lumen-lifestyle.com'); return false;" class="hover:text-primary transition-colors">Atelier Concierge</a></li>
+          <li><a href="#" onclick="showToast('Carbon-neutral packaging certified'); return false;" class="hover:text-primary transition-colors">Sustainability Dossier</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div>
+        <h4 class="font-label-sm text-xs uppercase tracking-widest text-primary font-bold mb-4">LUMEN Journal</h4>
+        <p class="text-xs text-on-surface-variant mb-3">
+          Receive seasonal atelier invitations and private 15% privilege access.
+        </p>
+        <form class="space-y-2" onsubmit="event.preventDefault(); showToast('Welcome! Privilege LUMEN15 unlocked.');">
+          <input class="w-full h-10 px-3 rounded-lg bg-white border border-outline-variant/30 text-xs text-on-surface focus:outline-none focus:border-primary" placeholder="Enter your email" type="email" required/>
+          <button class="w-full h-10 bg-primary text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-primary-hover active:scale-95 transition-all shadow-xs" type="submit">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="lumen-container pt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <span>© 2026 LUMEN Atelier Storefront Inc. All rights reserved.</span>
+      <div class="flex items-center gap-6">
+        <span class="hover:text-on-surface cursor-pointer">Privacy Policy</span>
+        <span class="hover:text-on-surface cursor-pointer">Terms of Service</span>
+        <span class="hover:text-on-surface cursor-pointer">Accessibility</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Navigation Bar (Hidden on Desktop) -->
+  <nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-1px_10px_rgba(0,0,0,0.05)] border-t border-outline-variant/30" data-active-classes="text-primary font-label-md">
+    <div class="h-16 px-4 flex items-center justify-around">
+      <a aria-current="page" class="flex-1 flex flex-col items-center justify-center py-1 text-primary font-semibold" data-path="home" href="index.html">
+        <span class="material-symbols-outlined text-[24px]">home</span>
+        <span class="text-[11px]">Home</span>
+      </a>
+      <a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface" data-path="shop" href="shop.html">
+        <span class="material-symbols-outlined text-[24px]">grid_view</span>
+        <span class="text-[11px]">Shop</span>
+      </a>
+      <a class="flex-1 relative flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface" data-path="wishlist" href="#" onclick="showToast('Your Saved Curations (2 pieces)', 'favorite'); return false;">
+        <div class="relative flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">favorite</span>
+          <span class="wishlist-count-badge absolute -top-1 -right-2 flex items-center justify-center min-w-[14px] h-3.5 px-0.5 rounded-full bg-primary text-white text-[9px] leading-none">2</span>
+        </div>
+        <span class="text-[11px]">Wishlist</span>
+      </a>
+      <a class="flex-1 relative flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface" data-path="cart" href="cart.html">
+        <div class="relative flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+          <span class="cart-count-badge absolute -top-1 -right-2 flex items-center justify-center min-w-[14px] h-3.5 px-0.5 rounded-full bg-primary text-white text-[9px] leading-none">3</span>
+        </div>
+        <span class="text-[11px]">Cart</span>
+      </a>
+      <a class="flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface" data-path="profile" href="#" onclick="showToast('Patron Account: Verified Atelier Member', 'person'); return false;">
+        <span class="material-symbols-outlined text-[24px]">person</span>
+        <span class="text-[11px]">Profile</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="js/main.js"></script>
+  <script>
+    (function initTimer() {
+      let seconds = 14 * 3600 + 28 * 60 + 49;
+      const el = document.getElementById('promo-timer');
+      if (!el) return;
+      setInterval(() => {
+        if (seconds > 0) {
+          seconds--;
+          const h = Math.floor(seconds / 3600);
+          const m = Math.floor((seconds % 3600) / 60);
+          const s = seconds % 60;
+          el.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#a04100", "primary": "#9c3f00", "tertiary": "#38654d", "inverse-surface": "#303036", "on-secondary-fixed": "#1c1b1b", "on-primary-container": "#fffbff", "on-tertiary-fixed": "#002112", "on-background": "#1b1b21", "on-primary-fixed-variant": "#7a3000", "secondary-container": "#e5e2e1", "tertiary-fixed-dim": "#a1d1b4", "on-surface": "#1b1b21", "error-container": "#ffdad6", "tertiary-fixed": "#bceecf", "on-secondary-fixed-variant": "#474646", "tertiary-container": "#507e65", "primary-fixed-dim": "#ffb693", "error": "#ba1a1a", "on-surface-variant": "#574239", "surface": "#fbf8ff", "surface-container-low": "#f5f2fb", "inverse-primary": "#ffb693", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#224f39", "on-error-container": "#93000a", "secondary-fixed": "#e5e2e1", "on-secondary-container": "#656464", "secondary": "#5f5e5e", "background": "#fbf8ff", "on-error": "#ffffff", "on-primary-fixed": "#341000", "on-secondary": "#ffffff", "surface-variant": "#e4e1ea", "surface-container": "#efecf5", "on-tertiary-container": "#f6fff6", "surface-container-high": "#eae7ef", "outline-variant": "#dec0b4", "surface-bright": "#fbf8ff", "surface-container-lowest": "#ffffff", "surface-dim": "#dbd9e1", "secondary-fixed-dim": "#c8c6c5", "inverse-on-surface": "#f2eff8", "on-primary": "#ffffff", "surface-container-highest": "#e4e1ea", "primary-fixed": "#ffdbcb", "primary-container": "#c05410", "outline": "#8b7267" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "2rem", "margin-mobile": "1rem", "space-md": "1rem", "gutter": "1rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "title-editorial": ["Bodoni Moda"], "headline-lg": ["Bodoni Moda"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Bodoni Moda"], "headline-lg-mobile": ["Bodoni Moda"], "display-hero": ["Bodoni Moda"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Bodoni Moda"], "display-hero-mobile": ["Bodoni Moda"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "title-editorial": ["16px", { "lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-hero": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface antialiased min-h-full flex flex-col font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="LUMEN Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkBaUXleHL9t71RR90cS7uwFi1pAkLYYF3X2cpN-WGvcTMQR8lDiikKBzJM5dQ8NWOsTfP3uLyEWqpNj-2kFMln9EhrrLGCAfA9BDvW3oxYcrTNeDFqqK6eGnJ_Vnbe1HXdTJ-JTfBSTDFDPuAUp0ViSVeooL5imfVh91rvVC1ldkQk_DxRuwpOpuMWyAAdryL1Uvx7fn6pY4LN7sgHpvK77s-xUJjOnxH0jIkUtUuGD6qTK-iNJV"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-space-xs">Checkout</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Share" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9pbn7AtDgkfq3byt9VdCD9s0doNwbzM5XNCN9gXYUhG_3eIsL8Lt_dy3Ejn0VLfPl2_TM3lQBsCh2R815PPGU7YgteSmramRL6Bkrf7V9CTQOEujdLKqZ9-MDBayu4iuedMbZcpYjphgrtP7icqAAnmKsvUxThNVNlJB1Mn090DZ7FG6jW3m5s8o1WSKrfV3n6GrernEQZN2p1bBtPZRyFdfiizIjlsDcugsmXHOV_rmO5vhlAb0J"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-32">
+<!-- Stepper Progress Tracker -->
+<section class="px-margin-mobile pt-space-md pb-space-sm bg-surface">
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-sm flex items-center justify-between">
+<!-- Step 1 Done -->
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Shipping</span>
+</div>
+<div class="h-0.5 w-6 bg-tertiary-fixed-dim rounded-full"></div>
+<!-- Step 2 Done -->
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Delivery</span>
+</div>
+<div class="h-0.5 w-6 bg-primary rounded-full"></div>
+<!-- Step 3 Active -->
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm">
+          3
+        </div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Payment</span>
+</div>
+</div>
+</section>
+<!-- Collapsible Order Summary Bar -->
+<section class="px-margin-mobile py-space-xs">
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm transition-all duration-300">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" id="summary-toggle" type="button">
+<div class="flex items-center gap-space-sm">
+<!-- Overlapping Mini Thumbnails -->
+<div class="flex -space-x-3 overflow-hidden items-center pr-1">
+<img class="inline-block h-9 w-9 rounded-full object-cover shadow-sm bg-surface-container-high" data-alt="Minimalist raw linen unstructured blazer jacket in warm oat stone palette on soft studio backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Ib38XSDmu4V1aN50uNyaF59WIZCdHTQg7V-CLVLP9Lh2HGCvZM2TGkzbPJpC2EMIaIG4eBWIj_Mm2MmBNBAU8pFn27X_Y1F8iUCLDxY--98acxfW1YnajdDAkXNRH5SylazOJFIAe1I7GhaFPhwiAo_IcruOlGH4SQUT5IN67Viya2SpMgbnC3fPIlaz3F1vLXALkcoRVAJ8a3iVUeMq7SzaQ07BqiApletcUtIFVrlpLd9nhhJ5"/>
+<img class="inline-block h-9 w-9 rounded-full object-cover shadow-sm bg-surface-container-high" data-alt="Architectural terracotta ceramic sculptural vessel on warm neutral travertine stone shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC46bBDix6G0pNU26PG5zBTDTgigzZDiRz-rZag8h6_PYand_ww4pGtpdCRGkG_ke-K4SlE8nTDpx4Hd3qiw5eqqY02HHba9HKCIjnht8BXj6QOB_1ZK8h3XzhAfJAmeiDJCRd9NycKG-VN62t5uyhtbKCZ19wLc7DuhB_lPtoeIBSD7RzyTvsocRdx2BGG5k5q7FPlQTS4khj8wfd_KjTzPIlWTfr7pS4d1wkrLRlNsI_2yyou9vGA"/>
+<img class="inline-block h-9 w-9 rounded-full object-cover shadow-sm bg-surface-container-high" data-alt="Handcrafted vegetal tanned minimalist leather tote bag in espresso dark brown tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtlmib1ROYSmINOTAATvxh9cmWCMj0BUbnZubl6lTFW57vKjqqai0c4PHf88Y1725G8vX5Dhzq7e9rCsIsJ6IEAK0krUKNoqg-BO6D2yvg0claqrtcDwoRLIKp5_vP6FRBSRtDbxdeA1MTsJQXp-5F5s2JACCLJx4dKO7Czmdmoa8XfK8u--yvLc50KX9-ZtJ1hyzLcJeFobV3XVV0kWI_O6ktyiPcr41Dne96gNvFQz3HAeLK5o24"/>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Order Summary (3 items)</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm" id="summary-badge">Free Express</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tap to inspect garments &amp; taxes</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">$713.80</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-200" id="summary-icon">expand_more</span>
+</div>
+</button>
+<!-- Expandable Drawer Details -->
+<div class="hidden px-space-md pb-space-md pt-space-xs space-y-space-sm bg-surface-container-high/50" id="summary-content">
+<div class="space-y-space-xs pt-space-xs font-body-sm text-body-sm">
+<div class="flex justify-between items-center text-on-surface">
+<span>Sartorial Linen Trench (M / Oat)</span>
+<span class="font-label-md text-label-md">$340.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Arch Ceramic Table Vessel #04</span>
+<span class="font-label-md text-label-md">$185.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>Pebbled Leather Folio (Espresso)</span>
+<span class="font-label-md text-label-md">$145.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant pt-space-xs">
+<span>Standard Courier Shipping</span>
+<span class="text-tertiary font-label-md text-label-md">FREE</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Estimated NY State Sales Tax</span>
+<span class="font-label-md text-label-md">$43.80</span>
+</div>
+</div>
+<div class="pt-space-xs flex justify-between items-baseline text-on-surface">
+<span class="font-label-lg text-label-lg">Final Total</span>
+<span class="font-headline-md text-headline-md text-primary">$713.80</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Express Checkout Fast-Lane -->
+<section class="px-margin-mobile pt-space-sm pb-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Instant Express Checkout</span>
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 1-Click Secure
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Apple Pay CTA Button -->
+<button class="h-12 w-full rounded-lg bg-inverse-surface text-inverse-on-surface flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-transform shadow-sm focus:outline-none" type="button">
+<svg class="h-5 w-auto fill-current" viewbox="0 0 170 170">
+<path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.74 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.67-7.81-11.96-14.34-6.86-10.45-12.06-22.14-15.6-35.08-3.54-12.93-5.31-24.81-5.31-35.63 0-14.92 3.6-27.18 10.8-36.78 7.2-9.6 16.51-14.47 27.93-14.61 5.44 0 11.03 1.39 16.76 4.18 5.73 2.78 9.58 4.23 11.55 4.35 1.57 0 5.66-1.63 12.27-4.89 6.61-3.26 12.33-4.66 17.16-4.2 12.7.99 22.84 5.91 30.41 14.77-11.08 6.72-16.51 16.09-16.29 28.12.23 9.49 3.82 17.48 10.78 23.97 6.96 6.49 15.35 10.15 25.17 10.98-2.11 6.53-4.69 13.19-7.73 19.98zM119.22 33.15c0-7.23 2.65-13.99 7.95-20.28 5.3-6.29 11.75-10.29 19.34-12-1.04 7.02-3.8 13.62-8.29 19.8-4.49 6.18-10.82 10.33-18.99 12.48h-.01z"></path>
+</svg>
+<span class="font-label-md text-label-md tracking-wider">Pay</span>
+</button>
+<!-- Shop Pay CTA Button -->
+<button class="h-12 w-full rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center gap-1.5 hover:opacity-90 active:scale-[0.98] transition-transform shadow-sm focus:outline-none" type="button">
+<span class="font-title-editorial text-title-editorial italic lowercase">shop</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">Pay</span>
+</button>
+</div>
+<!-- Subtle Divider -->
+<div class="relative flex py-space-xs items-center">
+<div class="flex-grow h-0.5 bg-surface-container"></div>
+<span class="flex-shrink mx-3 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest">or continue with step 3</span>
+<div class="flex-grow h-0.5 bg-surface-container"></div>
+</div>
+</div>
+</section>
+<!-- Step 1 Compact Recap: Contact & Shipping Address -->
+<section class="px-margin-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">1. Delivery Address</span>
+</div>
+<button class="text-primary hover:text-primary-container font-label-md text-label-md focus:outline-none transition-colors" type="button">
+          Change
+        </button>
+</div>
+<div class="mt-space-xs pl-7 space-y-0.5">
+<p class="font-label-lg text-label-lg text-on-surface">Sarah Jenkins <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">• +1 (555) 234-8901</span></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">742 Evergreen Terrace, Apt 4B, Brooklyn, NY 11201</p>
+</div>
+</div>
+</section>
+<!-- Step 2 Compact Recap: Delivery Method Radio Selector -->
+<section class="px-margin-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px]">done</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">2. Courier Method</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">Guaranteed</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Express Courier Option (Default active) -->
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low cursor-pointer transition-colors" id="option-delivery-express">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="accent-primary w-4 h-4 text-primary focus:ring-0" name="delivery_method" type="radio" value="express"/>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Express Courier Delivery</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1–2 Business Days (Carbon Neutral)</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">FREE</span>
+</label>
+<!-- Next Day Morning Option -->
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface hover:bg-surface-container-low cursor-pointer transition-colors" id="option-delivery-overnight">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4 text-primary focus:ring-0" name="delivery_method" type="radio" value="overnight"/>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Next-Day Priority Morning</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Before 10:30 AM via White Glove</p>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface">+$18.00</span>
+</label>
+</div>
+</div>
+</section>
+<!-- Step 3 Interactive Accordion: Payment Options -->
+<section class="px-margin-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm">
+            3
+          </div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Payment Solution</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-label-sm text-label-sm">Encrypted</span>
+</div>
+</div>
+<!-- Payment Choice Cards -->
+<div class="space-y-space-xs" id="payment-accordion-group">
+<!-- OPTION A: Credit / Debit Card (Default expanded) -->
+<div class="rounded-xl overflow-hidden bg-surface-container-low transition-all">
+<button class="w-full p-space-sm flex items-center justify-between text-left focus:outline-none" onclick="selectPaymentTab('card')" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">credit_card</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Credit / Debit Card</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All major credit cards supported</p>
+</div>
+</div>
+<!-- Auto-detect badge indicators -->
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold tracking-tight" id="badge-visa">VISA</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold tracking-tight" id="badge-master">MC</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-semibold tracking-tight" id="badge-amex">AMEX</span>
+</div>
+</button>
+<!-- Card Form Body -->
+<div class="p-space-md pt-0 space-y-space-sm" id="payment-body-card">
+<!-- Card Number -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex justify-between">
+<span>Card Number</span>
+<span class="text-primary font-bold lowercase tracking-normal" id="card-type-detected"></span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-high transition-colors" id="input-card-number" inputmode="numeric" maxlength="19" placeholder="4242 •••• •••• 4242" type="tel"/>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant text-[20px]">contactless</span>
+</div>
+</div>
+<!-- Expiry & CVV Twin Row -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Expiry Date</label>
+<input class="w-full h-12 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-high transition-colors" id="input-expiry" inputmode="numeric" maxlength="5" placeholder="MM / YY" type="tel"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex justify-between">
+<span>CVV / CVC</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant cursor-pointer" title="3 or 4 digits on card back">info</span>
+</label>
+<input class="w-full h-12 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-high transition-colors" id="input-cvv" inputmode="numeric" maxlength="4" placeholder="•••" type="tel"/>
+</div>
+</div>
+<!-- Cardholder Name -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cardholder Full Name</label>
+<input class="w-full h-12 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface uppercase focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="SARAH JENKINS"/>
+</div>
+</div>
+</div>
+<!-- OPTION B: Buy Now Pay Later (Tabby / Klarna) -->
+<div class="rounded-xl overflow-hidden bg-surface transition-all">
+<button class="w-full p-space-sm flex items-center justify-between text-left focus:outline-none" onclick="selectPaymentTab('bnpl')" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">splitscreen</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Buy Now, Pay Later</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4 installments of <span class="font-bold text-on-surface">$178.45</span></p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm">0% APR</span>
+</div>
+</button>
+<div class="hidden p-space-md pt-0 space-y-space-xs text-on-surface-variant font-body-sm text-body-sm" id="payment-body-bnpl">
+<p>Split your purchase into 4 equal interest-free installments, billed automatically every 2 weeks via <strong class="text-on-surface">Klarna</strong> or <strong class="text-on-surface">Tabby</strong>.</p>
+<div class="grid grid-cols-4 gap-1.5 pt-1 text-center font-label-sm text-label-sm">
+<div class="p-1.5 rounded bg-surface-container-lowest text-on-surface">
+<span class="block text-primary font-bold">Today</span>
+                $178.45
+              </div>
+<div class="p-1.5 rounded bg-surface-container-lowest text-on-surface">
+<span class="block text-on-surface-variant">Wk 2</span>
+                $178.45
+              </div>
+<div class="p-1.5 rounded bg-surface-container-lowest text-on-surface">
+<span class="block text-on-surface-variant">Wk 4</span>
+                $178.45
+              </div>
+<div class="p-1.5 rounded bg-surface-container-lowest text-on-surface">
+<span class="block text-on-surface-variant">Wk 6</span>
+                $178.45
+              </div>
+</div>
+</div>
+</div>
+<!-- OPTION C: Apple Pay / Digital Wallet -->
+<div class="rounded-xl overflow-hidden bg-surface transition-all">
+<button class="w-full p-space-sm flex items-center justify-between text-left focus:outline-none" onclick="selectPaymentTab('wallet')" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">account_balance_wallet</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Apple Pay / Digital Wallet</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Authorize with FaceID / TouchID</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<div class="hidden p-space-md pt-0 font-body-sm text-body-sm text-on-surface-variant" id="payment-body-wallet">
+<p>You will be prompted to authenticate your pre-saved cards with biometrics directly upon tapping Place Order.</p>
+</div>
+</div>
+<!-- OPTION D: Cash on Delivery -->
+<div class="rounded-xl overflow-hidden bg-surface transition-all">
+<button class="w-full p-space-sm flex items-center justify-between text-left focus:outline-none" onclick="selectPaymentTab('cod')" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">local_atm</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Cash on Delivery</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pay with physical cash upon arrival</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">+$4.00 fee</span>
+</button>
+<div class="hidden p-space-md pt-0 font-body-sm text-body-sm text-on-surface-variant" id="payment-body-cod">
+<p>Please prepare exact cash sum of $717.80. Courier agents carry zero change for security reasons.</p>
+</div>
+</div>
+</div>
+<!-- Consent & Billing Match Checkboxes -->
+<div class="pt-space-xs space-y-space-sm">
+<label class="flex items-start gap-space-sm cursor-pointer">
+<input checked="" class="mt-0.5 accent-primary w-4 h-4 text-primary rounded focus:ring-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+            Billing address matches shipping address (742 Evergreen Terrace)
+          </span>
+</label>
+<label class="flex items-start gap-space-sm cursor-pointer">
+<input checked="" class="mt-0.5 accent-primary w-4 h-4 text-primary rounded focus:ring-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+            Save this payment method securely for future LUMEN releases
+          </span>
+</label>
+</div>
+</div>
+</section>
+<!-- Editorial Brand Reassurance Banner -->
+<section class="px-margin-mobile py-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center gap-space-md">
+<img class="w-16 h-16 rounded-lg object-cover shadow-sm bg-surface-container-highest" data-alt="High luxury boutique packaging box tied with clean cotton grosgrain ribbon in warm terracotta aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8JxQfgJpW6_2t0s-xpRHc-oKcVPKe26fK4umr3MOf_73gpeGrrdmKm2tCch8rvn4yWTmdhc_G-fNZAiPuh9L3L9cqaI31mjLwMivnqKjhjBJzxVc63U86gIS8KCcthzbPp7pAj8v5GDtXdzUOOjUlXS_ENtthdMlsUjnTlC8AI460p37nhDDOrlOuJ9O5PqRFI43yGMMDHJaR-ocCWt32d0aWP3pg7UZwWcix3EqnVyQL0e4DKtRc"/>
+<div class="space-y-0.5">
+<h4 class="font-title-editorial text-title-editorial text-on-surface">The LUMEN White-Glove Promise</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complimentary insured transit, tailored archive garment covers, and 30-day effortless returns.</p>
+</div>
+</div>
+</section>
+<!-- Trust & Compliance Micro-copy -->
+<section class="px-margin-mobile py-space-xs text-center space-y-1">
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface">Bank-Grade 256-Bit SSL Protection</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mx-auto">
+      Your transaction is protected with military-grade encryption. 30-day money-back guarantee with zero restocking deductions.
+    </p>
+</section>
+<!-- Sticky Bottom Purchase & Authorization Rail -->
+<aside class="fixed bottom-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-md px-margin-mobile py-space-sm shadow-[0_-4px_20px_rgba(0,0,0,0.06)] pb-safe">
+<div class="flex items-center justify-between gap-space-md max-w-md mx-auto">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Payable</p>
+<p class="font-headline-md text-headline-md text-on-surface leading-tight" id="footer-total-display">$713.80</p>
+</div>
+<button class="flex-1 h-13 py-3 px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-md focus:outline-none" id="place-order-cta" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Pay &amp; Place Order</span>
+</button>
+</div>
+</aside>
+</div>
+<script>
+  // Interactive Accordion Controller for Payment Options
+  function selectPaymentTab(tabKey) {
+    const tabs = ['card', 'bnpl', 'wallet', 'cod'];
+    tabs.forEach(key => {
+      const el = document.getElementById('payment-body-' + key);
+      const parent = el ? el.parentElement : null;
+      if (!el || !parent) return;
+
+      if (key === tabKey) {
+        el.classList.remove('hidden');
+        parent.classList.remove('bg-surface');
+        parent.classList.add('bg-surface-container-low');
+      } else {
+        el.classList.add('hidden');
+        parent.classList.remove('bg-surface-container-low');
+        parent.classList.add('bg-surface');
+      }
+    });
+  }
+
+  // Card Number Auto-detection & Spacing Mask
+  const cardInput = document.getElementById('input-card-number');
+  const cardTypeDetected = document.getElementById('card-type-detected');
+  const badgeVisa = document.getElementById('badge-visa');
+  const badgeMaster = document.getElementById('badge-master');
+  const badgeAmex = document.getElementById('badge-amex');
+
+  if (cardInput) {
+    cardInput.addEventListener('input', (e) => {
+      let val = e.target.value.replace(/\D/g, '');
+      let formatted = val.match(/.{1,4}/g)?.join(' ') || val;
+      e.target.value = formatted.substring(0, 19);
+
+      // Reset badges styling
+      [badgeVisa, badgeMaster, badgeAmex].forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container', 'text-on-surface');
+      });
+
+      if (val.startsWith('4')) {
+        cardTypeDetected.textContent = 'Visa';
+        badgeVisa.classList.add('bg-primary', 'text-on-primary');
+        badgeVisa.classList.remove('bg-surface-container', 'text-on-surface');
+      } else if (val.startsWith('5') || val.startsWith('2')) {
+        cardTypeDetected.textContent = 'Mastercard';
+        badgeMaster.classList.add('bg-primary', 'text-on-primary');
+        badgeMaster.classList.remove('bg-surface-container', 'text-on-surface');
+      } else if (val.startsWith('3')) {
+        cardTypeDetected.textContent = 'Amex';
+        badgeAmex.classList.add('bg-primary', 'text-on-primary');
+        badgeAmex.classList.remove('bg-surface-container', 'text-on-surface');
+      } else {
+        cardTypeDetected.textContent = '';
+      }
+    });
+  }
+
+  // Expiry Date Auto-slash Mask
+  const expiryInput = document.getElementById('input-expiry');
+  if (expiryInput) {
+    expiryInput.addEventListener('input', (e) => {
+      let val = e.target.value.replace(/\D/g, '');
+      if (val.length >= 2) {
+        e.target.value = val.substring(0, 2) + ' / ' + val.substring(2, 4);
+      } else {
+        e.target.value = val;
+      }
+    });
+  }
+
+  // Delivery Method Pricing Switcher
+  const deliveryRadios = document.querySelectorAll('input[name="delivery_method"]');
+  const footerTotal = document.getElementById('footer-total-display');
+  const deliveryOvernight = document.getElementById('option-delivery-overnight');
+  const deliveryExpress = document.getElementById('option-delivery-express');
+
+  deliveryRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      if (e.target.value === 'overnight') {
+        footerTotal.textContent = '$731.80';
+        deliveryOvernight.classList.add('bg-surface-container-low');
+        deliveryOvernight.classList.remove('bg-surface');
+        deliveryExpress.classList.remove('bg-surface-container-low');
+        deliveryExpress.classList.add('bg-surface');
+      } else {
+        footerTotal.textContent = '$713.80';
+        deliveryExpress.classList.add('bg-surface-container-low');
+        deliveryExpress.classList.remove('bg-surface');
+        deliveryOvernight.classList.remove('bg-surface-container-low');
+        deliveryOvernight.classList.add('bg-surface');
+      }
+    });
+  });
+
+  // Collapsible Order Summary Accordion
+  const summaryToggle = document.getElementById('summary-toggle');
+  const summaryContent = document.getElementById('summary-content');
+  const summaryIcon = document.getElementById('summary-icon');
+
+  if (summaryToggle && summaryContent) {
+    summaryToggle.addEventListener('click', () => {
+      const isHidden = summaryContent.classList.contains('hidden');
+      if (isHidden) {
+        summaryContent.classList.remove('hidden');
+        summaryIcon.classList.add('rotate-180');
+      } else {
+        summaryContent.classList.add('hidden');
+        summaryIcon.classList.remove('rotate-180');
+      }
+    });
+  }
+
+  // Haptic Button Feedback Animation
+  const placeOrderBtn = document.getElementById('place-order-cta');
+  if (placeOrderBtn) {
+    placeOrderBtn.addEventListener('click', () => {
+      placeOrderBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Processing Securely...';
+      placeOrderBtn.classList.add('opacity-90');
+      setTimeout(() => {
+        placeOrderBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> Order Confirmed!';
+        placeOrderBtn.classList.remove('bg-primary');
+        placeOrderBtn.classList.add('bg-tertiary');
+      }, 1400);
+    });
+  }
+</script></main></body></html>
